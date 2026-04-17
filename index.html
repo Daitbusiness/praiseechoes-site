@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PraiseEchoes | Worship Music</title>
+  <meta name="description" content="PraiseEchoes is a worship music website featuring original Christian songs, Chinese worship, devotional piano, and Scripture-inspired music." />
+  <meta name="theme-color" content="#e8dfd1" />
+  <meta property="og:title" content="PraiseEchoes | Worship Music" />
+  <meta property="og:description" content="Original worship songs, devotional piano, and Scripture-inspired music." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.youtube.com/@PraiseEchoes" />
+  <meta property="og:image" content="https://yt3.googleusercontent.com/X8q0CcuQgt5u0HzUIBdwi3S3f133Cgrvkef-sUwN3VmfOvucW5ilj3d0anGpzW1XNA6Iye-DAzw=w2276-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj" />
+  <link rel="icon" href="https://yt3.googleusercontent.com/gDSnFWHAwek_bPlytOEZ_txhAAKLxpCRAetHMA9rbFlb1kOd1o1O-OSjDyqb65TinlnYpMv3eA=s160-c-k-c0x00ffffff-no-rj" />
+
+  <style>
+    :root {
+      --bg: #f5efe7;
+      --bg-soft: #fbf8f4;
+      --ink: #231c18;
+      --muted: #716358;
+      --line: rgba(35, 28, 24, 0.10);
+      --line-soft: rgba(255, 255, 255, 0.18);
+      --card: rgba(255,255,255,0.76);
+      --card-strong: rgba(255,255,255,0.88);
+      --accent: #9d7750;
+      --accent-deep: #7e5d3d;
+      --accent-light: #d8b894;
+      --olive: #83897c;
+      --shadow: 0 24px 80px rgba(54, 37, 23, 0.12);
+      --shadow-strong: 0 34px 90px rgba(0, 0, 0, 0.18);
+      --radius-2xl: 34px;
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 18px;
+      --max: 1240px;
+      --banner: url('https://yt3.googleusercontent.com/X8q0CcuQgt5u0HzUIBdwi3S3f133Cgrvkef-sUwN3VmfOvucW5ilj3d0anGpzW1XNA6Iye-DAzw=w2276-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj');
+      --logo: url('https://yt3.googleusercontent.com/gDSnFWHAwek_bPlytOEZ_txhAAKLxpCRAetHMA9rbFlb1kOd1o1O-OSjDyqb65TinlnYpMv3eA=s160-c-k-c0x00ffffff-no-rj');
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(157,119,80,0.08), transparent 28%),
+        radial-gradient(circle at top right, rgba(131,137,124,0.08), transparent 24%),
+        linear-gradient(180deg, #f8f4ee 0%, #f5efe7 42%, #f2ebe2 100%);
+      line-height: 1.7;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .surface {
+      background: linear-gradient(180deg, var(--card-strong), var(--card));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 80;
+      background: rgba(248, 243, 236, 0.78);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(35, 28, 24, 0.07);
+    }
+
+    .nav {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      overflow: hidden;
+      flex: 0 0 auto;
+      border: 1px solid rgba(255,255,255,0.55);
+      box-shadow: 0 12px 26px rgba(80, 52, 26, 0.14);
+      background: #fff;
+    }
+
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .brand-title {
+      margin: 0;
+      font-size: 1.08rem;
+      letter-spacing: 0.03em;
+      font-weight: 800;
+    }
+
+    .brand-subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      transition: color .2s ease;
+    }
+
+    .nav-links a:hover { color: var(--ink); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 22px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #b78b60);
+      color: #fffdfa;
+      box-shadow: 0 16px 30px rgba(126, 93, 61, 0.20);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.6);
+      border-color: rgba(35, 28, 24, 0.10);
+      color: var(--ink);
+    }
+
+    .hero {
+      padding: 28px 0 34px;
+      position: relative;
+    }
+
+    .hero-wrap {
+      position: relative;
+      min-height: 760px;
+      border-radius: 42px;
+      overflow: hidden;
+      box-shadow: var(--shadow-strong);
+      background:
+        linear-gradient(180deg, rgba(24, 19, 15, 0.16) 0%, rgba(24, 19, 15, 0.45) 44%, rgba(24, 19, 15, 0.74) 100%),
+        var(--banner) center/cover no-repeat;
+    }
+
+    .hero-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 18% 22%, rgba(255,255,255,0.12), transparent 24%),
+        radial-gradient(circle at 82% 24%, rgba(216,184,148,0.14), transparent 26%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      min-height: 760px;
+      display: grid;
+      grid-template-columns: 1.04fr 0.96fr;
+      align-items: end;
+      gap: 28px;
+      padding: 44px;
+    }
+
+    .hero-copy {
+      max-width: 660px;
+      color: #fff8f0;
+      padding: 10px 4px 4px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 9px 15px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.16);
+      color: #fff2dd;
+      font-size: 0.88rem;
+      letter-spacing: 0.02em;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .hero-copy h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2.8rem, 5.6vw, 5.8rem);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+    }
+
+    .hero-copy p {
+      margin: 0;
+      max-width: 58ch;
+      color: rgba(255, 245, 234, 0.9);
+      font-size: 1.05rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .hero-signature {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      max-width: 700px;
+    }
+
+    .signature-card {
+      padding: 16px 16px 14px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.14);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .signature-card strong {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 5px;
+      color: #fff6eb;
+    }
+
+    .signature-card span {
+      display: block;
+      color: rgba(255,245,234,0.82);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .hero-feature {
+      justify-self: end;
+      width: min(100%, 470px);
+      border-radius: 32px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.16);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.22);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .hero-feature-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 18px 10px;
+      color: #fff6eb;
+    }
+
+    .hero-feature-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      overflow: hidden;
+      flex: 0 0 auto;
+      border: 1px solid rgba(255,255,255,0.22);
+    }
+
+    .hero-feature-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-feature-top span {
+      display: block;
+      color: rgba(255,245,234,0.8);
+      font-size: 0.9rem;
+    }
+
+    .frame {
+      aspect-ratio: 16 / 9;
+      background: #000;
+      overflow: hidden;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .hero-feature-body {
+      padding: 16px 18px 20px;
+      color: #fff6eb;
+    }
+
+    .hero-feature-body h2 {
+      margin: 0 0 8px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .hero-feature-body p {
+      margin: 0;
+      color: rgba(255,245,234,0.82);
+      font-size: 0.94rem;
+    }
+
+    section {
+      padding: 40px 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 20px;
+      margin-bottom: 26px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(1.95rem, 3vw, 3rem);
+      letter-spacing: -0.04em;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+    }
+
+    .section-head p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      max-width: 62ch;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 22px;
+    }
+
+    .panel {
+      border-radius: var(--radius-xl);
+      padding: 28px;
+    }
+
+    .panel h3 {
+      margin: 0 0 12px;
+      font-size: 1.2rem;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+    }
+
+    .panel p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .feature-item {
+      display: grid;
+      grid-template-columns: 14px 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .feature-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      margin-top: 6px;
+      background: linear-gradient(135deg, var(--accent-light), var(--accent));
+      box-shadow: 0 8px 18px rgba(157,119,80,0.18);
+    }
+
+    .feature-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.98rem;
+      color: var(--ink);
+    }
+
+    .feature-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .video-card {
+      overflow: hidden;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(35,28,24,0.10);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .video-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 30px 70px rgba(54,37,23,0.16);
+    }
+
+    .thumb {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #ebe4db;
+    }
+
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .thumb::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.14) 100%);
+      pointer-events: none;
+    }
+
+    .play-badge {
+      position: absolute;
+      left: 16px;
+      bottom: 16px;
+      z-index: 2;
+      width: 56px;
+      height: 56px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,0.84);
+      color: var(--accent-deep);
+      border: 1px solid rgba(35,28,24,0.08);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+      font-size: 1rem;
+    }
+
+    .video-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .label {
+      color: var(--accent-deep);
+      font-size: 0.84rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .video-body h3 {
+      margin: 0;
+      font-size: 1.08rem;
+      line-height: 1.45;
+    }
+
+    .video-body p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding-top: 10px;
+      margin-top: auto;
+    }
+
+    .mini-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 10px 14px;
+      border: 1px solid rgba(35,28,24,0.10);
+      background: rgba(255,255,255,0.74);
+      color: var(--ink);
+      cursor: pointer;
+    }
+
+    .mini-btn.primary {
+      background: rgba(157,119,80,0.10);
+      color: var(--accent-deep);
+      border-color: rgba(157,119,80,0.18);
+    }
+
+    .quote-band {
+      padding-top: 8px;
+    }
+
+    .quote-box {
+      border-radius: 34px;
+      padding: 38px;
+      text-align: center;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.72)),
+        var(--banner) center/cover no-repeat;
+      border: 1px solid rgba(35,28,24,0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .quote-box p {
+      margin: 0 auto;
+      max-width: 32ch;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.8rem, 3vw, 3rem);
+      line-height: 1.28;
+      letter-spacing: -0.03em;
+      color: #36291f;
+    }
+
+    .closing {
+      padding-bottom: 76px;
+    }
+
+    .closing-box {
+      border-radius: 36px;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .closing-box h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.9rem, 3vw, 3.1rem);
+      letter-spacing: -0.04em;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+    }
+
+    .closing-box p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 56ch;
+    }
+
+    .closing-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .site-footer {
+      padding: 18px 0 38px;
+      border-top: 1px solid rgba(35,28,24,0.08);
+      color: var(--muted);
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    .footer-row a { color: var(--ink); }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      place-items: center;
+      background: rgba(27, 21, 16, 0.74);
+      padding: 20px;
+    }
+
+    .modal.open { display: grid; }
+
+    .modal-box {
+      width: min(1100px, 100%);
+      background: #14110e;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 34px 90px rgba(0,0,0,0.42);
+    }
+
+    .modal-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 16px;
+      color: #f8f1e8;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .modal-top h3 {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .modal-close {
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      border-radius: 999px;
+      padding: 10px 14px;
+      cursor: pointer;
+    }
+
+    .modal-player {
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+
+    .modal-player iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    @media (max-width: 1120px) {
+      .hero-inner,
+      .about-grid,
+      .closing-box {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-feature {
+        justify-self: start;
+        width: 100%;
+        max-width: 620px;
+      }
+
+      .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .closing-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 14px 0;
+      }
+
+      .nav-links {
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .hero-wrap,
+      .hero-inner {
+        min-height: auto;
+      }
+
+      .hero-inner,
+      .panel,
+      .quote-box,
+      .closing-box {
+        padding: 24px;
+      }
+
+      .hero-copy h1 {
+        font-size: 2.8rem;
+      }
+
+      .hero-signature,
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="PraiseEchoes home">
+        <div class="brand-logo">
+          <img src="https://yt3.googleusercontent.com/gDSnFWHAwek_bPlytOEZ_txhAAKLxpCRAetHMA9rbFlb1kOd1o1O-OSjDyqb65TinlnYpMv3eA=s160-c-k-c0x00ffffff-no-rj" alt="PraiseEchoes logo" />
+        </div>
+        <div>
+          <p class="brand-title">PRAISEECHOES</p>
+          <p class="brand-subtitle">Worship music for prayer, peace, and quiet reflection</p>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#music">Music</a>
+        <a href="#essence">Essence</a>
+        <a href="#connect">Connect</a>
+        <a class="btn btn-primary" href="https://www.youtube.com/@PraiseEchoes" target="_blank" rel="noopener noreferrer">YouTube Channel</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-wrap">
+          <div class="hero-inner">
+            <div class="hero-copy">
+              <div class="eyebrow">Original Worship • Devotional Piano • Scripture-Inspired Songs</div>
+              <h1>A more beautiful home for worship music.</h1>
+              <p>
+                PraiseEchoes is a refined space for songs shaped by prayer, Scripture, tenderness, and hope — a place where quiet melodies, Chinese worship, and original praise can be experienced with warmth, calm, and reverence.
+              </p>
+
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="https://www.youtube.com/@PraiseEchoes" target="_blank" rel="noopener noreferrer">Listen on YouTube</a>
+                <a class="btn btn-secondary" href="#music">Discover the Music</a>
+              </div>
+
+              <div class="hero-signature">
+                <div class="signature-card">
+                  <strong>Prayerful</strong>
+                  <span>Music created to slow the heart and turn it back toward God.</span>
+                </div>
+                <div class="signature-card">
+                  <strong>Scripture-Shaped</strong>
+                  <span>Songs inspired by biblical truth, devotion, and worshipful reflection.</span>
+                </div>
+                <div class="signature-card" id="essence">
+                  <strong>Warm & Timeless</strong>
+                  <span>A gentle sound rooted in peace, beauty, and spiritual depth.</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="hero-feature">
+              <div class="hero-feature-top">
+                <div class="hero-feature-avatar">
+                  <img src="https://yt3.googleusercontent.com/gDSnFWHAwek_bPlytOEZ_txhAAKLxpCRAetHMA9rbFlb1kOd1o1O-OSjDyqb65TinlnYpMv3eA=s160-c-k-c0x00ffffff-no-rj" alt="PraiseEchoes icon" />
+                </div>
+                <div>
+                  <strong>PraiseEchoes</strong>
+                  <span>Featured release</span>
+                </div>
+              </div>
+              <div class="frame">
+                <iframe
+                  src="https://www.youtube.com/embed/Pa_11ipHv40?rel=0"
+                  title="Prayer at First Light"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="hero-feature-body">
+                <h2>Prayer at First Light</h2>
+                <p>A gentle devotional piano moment for stillness, prayer, and a peaceful beginning.</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>The spirit behind the channel</h2>
+            <p>A brand presence designed to feel more like an artist home than a standard video page.</p>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <article class="panel surface">
+            <h3>Where worship meets quiet beauty</h3>
+            <p>
+              PraiseEchoes brings together original Christian songs, Chinese worship, Psalm-inspired writing, and devotional piano in a setting that feels calm, elegant, and deeply personal. The goal is not simply to release music, but to create a listening space marked by peace, sincerity, and spiritual depth.
+            </p>
+          </article>
+
+          <article class="panel surface">
+            <h3>What listeners can expect</h3>
+            <div class="feature-list">
+              <div class="feature-item">
+                <div class="feature-dot"></div>
+                <div>
+                  <strong>Original worship songs</strong>
+                  <span>Music that carries prayer, tenderness, and heartfelt praise.</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-dot"></div>
+                <div>
+                  <strong>Devotional piano</strong>
+                  <span>Gentle instrumental moments for study, reflection, and early morning quiet.</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-dot"></div>
+                <div>
+                  <strong>Scripture-centered themes</strong>
+                  <span>Releases shaped by the Psalms, faith, comfort, and renewed hope.</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="music">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Selected releases</h2>
+            <p>A curated collection from PraiseEchoes, presented with a more polished, album-like feel.</p>
+          </div>
+          <a class="btn btn-secondary" href="https://www.youtube.com/@PraiseEchoes/videos" target="_blank" rel="noopener noreferrer">View all videos</a>
+        </div>
+
+        <div class="video-grid" id="videoGrid"></div>
+      </div>
+    </section>
+
+    <section class="quote-band">
+      <div class="container">
+        <div class="quote-box">
+          <p>Let every melody become a quiet place where the soul remembers how to worship.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" id="connect">
+      <div class="container">
+        <div class="closing-box surface">
+          <div>
+            <h2>Stay close to each new release.</h2>
+            <p>
+              Step into the channel, revisit the songs that have spoken peace to your heart, and follow each new expression of worship as it arrives.
+            </p>
+          </div>
+          <div class="closing-actions">
+            <a class="btn btn-primary" href="https://www.youtube.com/@PraiseEchoes" target="_blank" rel="noopener noreferrer">Open channel</a>
+            <a class="btn btn-secondary" href="https://www.youtube.com/@PraiseEchoes?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Subscribe</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© <span id="year"></span> PraiseEchoes</span>
+      <span><a href="https://www.youtube.com/@PraiseEchoes" target="_blank" rel="noopener noreferrer">@PraiseEchoes</a></span>
+    </div>
+  </footer>
+
+  <div class="modal" id="videoModal" aria-hidden="true">
+    <div class="modal-box">
+      <div class="modal-top">
+        <h3 id="modalTitle">PraiseEchoes</h3>
+        <button class="modal-close" id="closeModal" type="button">Close</button>
+      </div>
+      <div class="modal-player" id="modalPlayer"></div>
+    </div>
+  </div>
+
+  <script>
+    const featuredVideos = [
+      {
+        id: 'Pa_11ipHv40',
+        title: 'Prayer at First Light',
+        description: 'A gentle devotional piano piece for prayer, reflection, and a peaceful beginning.',
+        label: 'Devotional Piano'
+      },
+      {
+        id: 'J9id_YUygOw',
+        title: '祢名何其美',
+        description: 'A worship song inspired by Psalm 8, centered on the beauty and majesty of God’s name.',
+        label: 'Psalm-Inspired Worship'
+      },
+      {
+        id: 'cVoEtONY2dU',
+        title: '栽在溪水旁',
+        description: 'A song of rootedness, blessing, and quiet strength drawn from Psalm 1.',
+        label: 'Chinese Worship'
+      },
+      {
+        id: 'G80TcE5vkQs',
+        title: '主耶穌今活著',
+        description: 'A resurrection-centered song of praise, hope, and living faith.',
+        label: 'Easter Worship'
+      },
+      {
+        id: 'B02S2iw-pA4',
+        title: '耶穌你配得我敬拜',
+        description: 'A heartfelt worship declaration of reverence, surrender, and adoration.',
+        label: 'Praise & Worship'
+      },
+      {
+        id: 'XIIzOWIP3jU',
+        title: '唯獨耶穌',
+        description: 'A clear confession of faith and the unmatched worth of Christ.',
+        label: 'Faith Declaration'
+      }
+    ];
+
+    const videoGrid = document.getElementById('videoGrid');
+    const modal = document.getElementById('videoModal');
+    const modalPlayer = document.getElementById('modalPlayer');
+    const modalTitle = document.getElementById('modalTitle');
+    const closeModal = document.getElementById('closeModal');
+
+    function escapeHtml(str) {
+      return String(str)
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+    }
+
+    function renderVideos() {
+      videoGrid.innerHTML = featuredVideos.map(video => `
+        <article class="video-card">
+          <a class="thumb" href="https://www.youtube.com/watch?v=${video.id}" target="_blank" rel="noopener noreferrer" aria-label="Open ${video.title} on YouTube">
+            <img src="https://i.ytimg.com/vi/${video.id}/hqdefault.jpg" alt="${video.title}">
+            <div class="play-badge">▶</div>
+          </a>
+          <div class="video-body">
+            <div class="label">${video.label}</div>
+            <h3>${video.title}</h3>
+            <p>${video.description}</p>
+            <div class="actions">
+              <button class="mini-btn primary" type="button" onclick="openVideo('${video.id}', '${escapeHtml(video.title)}')">Play Here</button>
+              <a class="mini-btn" href="https://www.youtube.com/watch?v=${video.id}" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function openVideo(videoId, title) {
+      modalTitle.textContent = title;
+      modalPlayer.innerHTML = `
+        <iframe
+          src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0"
+          title="${title}"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      `;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideo() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      modalPlayer.innerHTML = '';
+      document.body.style.overflow = '';
+    }
+
+    closeModal.addEventListener('click', closeVideo);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeVideo();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeVideo();
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    renderVideos();
+  </script>
+</body>
+</html>
