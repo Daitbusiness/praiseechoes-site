@@ -11,6 +11,7 @@
     name="description"
     content="PraiseEchoes is a worship music website featuring original Christian songs, Chinese worship, devotional piano, and Scripture-inspired music."
   />
+  <link rel="canonical" href="https://www.praiseechoes.com/" />
   <meta name="theme-color" content="#e8dfd1" />
   <meta property="og:title" content="PraiseEchoes | Worship Music" />
   <meta
@@ -18,15 +19,55 @@
     content="Original worship songs, devotional piano, and Scripture-inspired music."
   />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.youtube.com/@PraiseEchoes" />
+  <meta property="og:url" content="https://www.praiseechoes.com/" />
   <meta
     property="og:image"
     content="https://yt3.googleusercontent.com/X8q0CcuQgt5u0HzUIBdwi3S3f133Cgrvkef-sUwN3VmfOvucW5ilj3d0anGpzW1XNA6Iye-DAzw=w2276-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
+  />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PraiseEchoes | Worship Music" />
+  <meta
+    name="twitter:description"
+    content="Original worship songs, devotional piano, Chinese worship, and Scripture-inspired music for prayer and reflection."
+  />
+  <meta
+    name="twitter:image"
+    content="https://yt3.googleusercontent.com/X8q0CcuQgt5u0HzUIBdwi3S3f133Cgrvkef-sUwN3VmfOvucW5ilj3d0anGpzW1XNA6Iye-DAzw=w2276-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
+  />
+  <link rel="preconnect" href="https://yt3.googleusercontent.com" crossorigin />
+  <link rel="preconnect" href="https://i.ytimg.com" crossorigin />
+  <link rel="preconnect" href="https://www.youtube-nocookie.com" crossorigin />
+  <link
+    rel="preload"
+    as="image"
+    href="https://yt3.googleusercontent.com/X8q0CcuQgt5u0HzUIBdwi3S3f133Cgrvkef-sUwN3VmfOvucW5ilj3d0anGpzW1XNA6Iye-DAzw=w2276-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
+    fetchpriority="high"
   />
   <link
     rel="icon"
     href="https://yt3.googleusercontent.com/gDSnFWHAwek_bPlytOEZ_txhAAKLxpCRAetHMA9rbFlb1kOd1o1O-OSjDyqb65TinlnYpMv3eA=s160-c-k-c0x00ffffff-no-rj"
   />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "PraiseEchoes",
+      "url": "https://www.praiseechoes.com/",
+      "sameAs": ["https://www.youtube.com/@PraiseEchoes"],
+      "description": "Original worship songs, Chinese worship, devotional piano, and Scripture-inspired music for prayer and quiet reflection.",
+      "image": "https://yt3.googleusercontent.com/X8q0CcuQgt5u0HzUIBdwi3S3f133Cgrvkef-sUwN3VmfOvucW5ilj3d0anGpzW1XNA6Iye-DAzw=w2276-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+      "subjectOf": [
+        {
+          "@type": "VideoObject",
+          "name": "Prayer at First Light",
+          "description": "A gentle devotional piano moment for stillness, prayer, and a peaceful beginning.",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Pa_11ipHv40/hqdefault.jpg",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/Pa_11ipHv40",
+          "url": "https://www.youtube.com/watch?v=Pa_11ipHv40"
+        }
+      ]
+    }
+  </script>
 
 <style>
   :root {
@@ -96,6 +137,11 @@
 
   button {
     font: inherit;
+  }
+
+  :focus-visible {
+    outline: 3px solid rgba(143, 106, 79, 0.58);
+    outline-offset: 4px;
   }
 
   .container {
@@ -238,6 +284,11 @@
     background: linear-gradient(135deg, #8f6a4f, #b08a67);
     color: #fffdfa;
     box-shadow: 0 16px 30px rgba(111, 80, 56, 0.22);
+  }
+
+  .nav-menu a.btn-primary,
+  .nav-menu a.btn-primary:hover {
+    color: #fffdfa;
   }
 
   .btn-secondary {
@@ -415,6 +466,60 @@
     border: 0;
   }
 
+  .video-poster-button {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .video-poster-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.92;
+    transition: transform .24s ease, opacity .24s ease;
+  }
+
+  .video-poster-button:hover img {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+
+  .poster-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 76px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    border-radius: 18px;
+    background: #d92626;
+    color: #fff;
+    box-shadow: 0 16px 36px rgba(0,0,0,0.26);
+    line-height: 1;
+  }
+
+  .poster-caption {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(0,0,0,0.56);
+    color: #fff8f0;
+    font-size: 0.88rem;
+    font-weight: 700;
+  }
+
   .hero-feature-body {
     padding: 16px 18px 20px;
     color: #fff6eb;
@@ -525,6 +630,33 @@
     gap: 22px;
   }
 
+  .music-stack {
+    display: grid;
+    gap: 34px;
+  }
+
+  .subsection-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+  }
+
+  .subsection-head h3 {
+    margin: 0;
+    font-size: clamp(1.35rem, 2vw, 1.9rem);
+    letter-spacing: -0.03em;
+    font-family: Georgia, "Times New Roman", serif;
+  }
+
+  .subsection-head p,
+  .feed-note {
+    margin: 4px 0 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
   .video-card {
     overflow: hidden;
     border-radius: 28px;
@@ -578,6 +710,13 @@
     border: 1px solid rgba(41,31,24,0.08);
     box-shadow: 0 14px 30px rgba(0,0,0,0.14);
     font-size: 1rem;
+  }
+
+  .play-badge svg,
+  .poster-play svg {
+    width: 18px;
+    height: 18px;
+    margin-left: 2px;
   }
 
   .video-body {
@@ -757,6 +896,23 @@
     padding: 10px 14px;
     cursor: pointer;
     min-height: 42px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
+
+    .btn:hover,
+    .video-card:hover,
+    .video-poster-button:hover img {
+      transform: none;
+    }
   }
 
   .modal-player {
@@ -940,6 +1096,16 @@
       gap: 16px;
     }
 
+    .music-stack {
+      gap: 28px;
+    }
+
+    .subsection-head {
+      align-items: flex-start;
+      flex-direction: column;
+      margin-bottom: 14px;
+    }
+
     .video-card {
       border-radius: 22px;
     }
@@ -1075,6 +1241,10 @@
           <img
             src="https://yt3.googleusercontent.com/gDSnFWHAwek_bPlytOEZ_txhAAKLxpCRAetHMA9rbFlb1kOd1o1O-OSjDyqb65TinlnYpMv3eA=s160-c-k-c0x00ffffff-no-rj"
             alt="PraiseEchoes logo"
+            width="160"
+            height="160"
+            decoding="async"
+            fetchpriority="high"
           />
         </div>
         <div>
@@ -1090,7 +1260,7 @@
           class="nav-toggle"
           id="navToggle"
           type="button"
-          aria-label="Toggle menu"
+          aria-label="Open menu"
           aria-expanded="false"
           aria-controls="navMenu"
         >
@@ -1169,6 +1339,10 @@
                   <img
                     src="https://yt3.googleusercontent.com/gDSnFWHAwek_bPlytOEZ_txhAAKLxpCRAetHMA9rbFlb1kOd1o1O-OSjDyqb65TinlnYpMv3eA=s160-c-k-c0x00ffffff-no-rj"
                     alt="PraiseEchoes icon"
+                    width="160"
+                    height="160"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div>
@@ -1178,13 +1352,28 @@
               </div>
 
               <div class="frame">
-                <iframe
-                  src="https://www.youtube-nocookie.com/embed/Pa_11ipHv40?rel=0"
-                  title="Prayer at First Light"
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
+                <button
+                  class="video-poster-button play-here"
+                  type="button"
+                  data-video-id="Pa_11ipHv40"
+                  data-video-title="Prayer at First Light"
+                  aria-label="Play Prayer at First Light"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/Pa_11ipHv40/hqdefault.jpg"
+                    alt="Prayer at First Light video thumbnail"
+                    width="480"
+                    height="360"
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <span class="poster-play" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </span>
+                  <span class="poster-caption">Play featured release</span>
+                </button>
               </div>
 
               <div class="hero-feature-body">
@@ -1249,7 +1438,10 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Selected releases</h2>
+            <h2>Music for prayer and reflection</h2>
+            <p>
+              New releases update automatically from YouTube, while the listener favorites below stay intentionally curated.
+            </p>
           </div>
           <a
             class="btn btn-secondary"
@@ -1261,7 +1453,29 @@
           </a>
         </div>
 
-        <div class="video-grid" id="videoGrid"></div>
+        <div class="music-stack">
+          <div>
+            <div class="subsection-head">
+              <div>
+                <h3>Latest from YouTube</h3>
+                <p id="latestStatus">Checking for recent releases...</p>
+              </div>
+            </div>
+            <div class="video-grid" id="latestVideoGrid"></div>
+          </div>
+
+          <div>
+            <div class="subsection-head">
+              <div>
+                <h3>Start here</h3>
+                <p>
+                  A hand-picked path into the heart of PraiseEchoes.
+                </p>
+              </div>
+            </div>
+            <div class="video-grid" id="curatedVideoGrid"></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1269,7 +1483,7 @@
       <div class="container">
         <div class="quote-box">
           <p>
-            The heavens declare the glory of God; the skies proclaim the work of his hands. _ Psalm 19:1
+            The heavens declare the glory of God; the skies proclaim the work of his hands. — Psalm 19:1
           </p>
         </div>
       </div>
@@ -1323,18 +1537,27 @@
     </div>
   </footer>
 
-  <div class="modal" id="videoModal" aria-hidden="true">
+  <div
+    class="modal"
+    id="videoModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+    aria-hidden="true"
+  >
     <div class="modal-box">
       <div class="modal-top">
         <h3 id="modalTitle">PraiseEchoes</h3>
-        <button class="modal-close" id="closeModal" type="button">Close</button>
+        <button class="modal-close" id="closeModal" type="button" aria-label="Close video">
+          Close
+        </button>
       </div>
       <div class="modal-player" id="modalPlayer"></div>
     </div>
   </div>
 
   <script>
-     const featuredVideos = [
+    const curatedVideos = [
     {
       id: '9f276O1T7bo',
       title: 'Quiet Worship Instrumental',
@@ -1372,14 +1595,27 @@
       label: 'Faith Declaration'
     }
   ];
+
+    const fallbackLatestVideos = [
+      {
+        id: 'Pa_11ipHv40',
+        title: 'Prayer at First Light',
+        description: 'A gentle devotional piano moment for stillness, prayer, and a peaceful beginning.',
+        label: 'Latest Release'
+      },
+      ...curatedVideos.slice(0, 5)
+    ];
   
-    const videoGrid = document.getElementById('videoGrid');
+    const latestVideoGrid = document.getElementById('latestVideoGrid');
+    const curatedVideoGrid = document.getElementById('curatedVideoGrid');
+    const latestStatus = document.getElementById('latestStatus');
     const modal = document.getElementById('videoModal');
     const modalPlayer = document.getElementById('modalPlayer');
     const modalTitle = document.getElementById('modalTitle');
     const closeModal = document.getElementById('closeModal');
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
+    let lastFocusedElement = null;
 
     function escapeHtml(str) {
       return String(str)
@@ -1390,39 +1626,74 @@
         .replace(/'/g, '&#39;');
     }
 
-    function renderVideos() {
-      videoGrid.innerHTML = featuredVideos.map(video => `
+    function formatDate(value) {
+      if (!value) return '';
+
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return '';
+
+      return new Intl.DateTimeFormat('en', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric'
+      }).format(date);
+    }
+
+    function normalizeVideo(video, fallbackLabel = 'PraiseEchoes') {
+      return {
+        id: video.id,
+        title: video.title || 'PraiseEchoes release',
+        description: video.description || 'A PraiseEchoes worship release for prayer and quiet reflection.',
+        label: video.label || fallbackLabel,
+        publishedAt: video.publishedAt || ''
+      };
+    }
+
+    function renderVideoCards(target, videos) {
+      target.innerHTML = videos.map(video => {
+        const normalized = normalizeVideo(video);
+        const published = formatDate(normalized.publishedAt);
+        const label = published ? `${normalized.label} • ${published}` : normalized.label;
+
+        return `
         <article class="video-card">
           <a
             class="thumb"
-            href="https://www.youtube.com/watch?v=${video.id}"
+            href="https://www.youtube.com/watch?v=${normalized.id}"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Open ${escapeHtml(video.title)} on YouTube"
+            aria-label="Open ${escapeHtml(normalized.title)} on YouTube"
           >
             <img
-              src="https://i.ytimg.com/vi/${video.id}/hqdefault.jpg"
-              alt="${escapeHtml(video.title)}"
+              src="https://i.ytimg.com/vi/${normalized.id}/hqdefault.jpg"
+              alt="${escapeHtml(normalized.title)}"
+              width="480"
+              height="360"
               loading="lazy"
+              decoding="async"
             />
-            <div class="play-badge">▶</div>
+            <div class="play-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
           </a>
           <div class="video-body">
-            <div class="label">${escapeHtml(video.label)}</div>
-            <h3>${escapeHtml(video.title)}</h3>
-            <p>${escapeHtml(video.description)}</p>
+            <div class="label">${escapeHtml(label)}</div>
+            <h3>${escapeHtml(normalized.title)}</h3>
+            <p>${escapeHtml(normalized.description)}</p>
             <div class="actions">
               <button
                 class="mini-btn primary play-here"
                 type="button"
-                data-video-id="${video.id}"
-                data-video-title="${escapeHtml(video.title)}"
+                data-video-id="${normalized.id}"
+                data-video-title="${escapeHtml(normalized.title)}"
               >
                 Play Here
               </button>
               <a
                 class="mini-btn"
-                href="https://www.youtube.com/watch?v=${video.id}"
+                href="https://www.youtube.com/watch?v=${normalized.id}"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -1431,15 +1702,45 @@
             </div>
           </div>
         </article>
-      `).join('');
+      `;
+      }).join('');
+    }
+
+    function renderCuratedVideos() {
+      renderVideoCards(curatedVideoGrid, curatedVideos);
+    }
+
+    function renderFallbackLatestVideos() {
+      renderVideoCards(latestVideoGrid, fallbackLatestVideos);
+      latestStatus.textContent = 'Showing recent releases while the automatic feed refreshes.';
+    }
+
+    async function loadLatestVideos() {
+      try {
+        const response = await fetch('data/latest-videos.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error('Latest video data is unavailable.');
+
+        const data = await response.json();
+        const videos = Array.isArray(data.videos) ? data.videos.slice(0, 6) : [];
+        if (!videos.length) throw new Error('Latest video data is empty.');
+
+        renderVideoCards(latestVideoGrid, videos.map(video => normalizeVideo(video, 'Latest Release')));
+        latestStatus.textContent = data.updatedAt
+          ? `Updated from YouTube RSS on ${formatDate(data.updatedAt)}.`
+          : 'Updated from YouTube RSS.';
+      } catch (error) {
+        renderFallbackLatestVideos();
+      }
     }
 
     function openVideo(videoId, title) {
+      lastFocusedElement = document.activeElement;
       modalTitle.textContent = title;
       modalPlayer.innerHTML = `
         <iframe
           src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0"
           title="${escapeHtml(title)}"
+          loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
@@ -1447,6 +1748,7 @@
       modal.classList.add('open');
       modal.setAttribute('aria-hidden', 'false');
       document.body.classList.add('modal-open');
+      closeModal.focus();
     }
 
     function closeVideo() {
@@ -1454,17 +1756,22 @@
       modal.setAttribute('aria-hidden', 'true');
       modalPlayer.innerHTML = '';
       document.body.classList.remove('modal-open');
+      if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+        lastFocusedElement.focus();
+      }
     }
 
     function openMenu() {
       navMenu.classList.add('open');
       navToggle.setAttribute('aria-expanded', 'true');
+      navToggle.setAttribute('aria-label', 'Close menu');
       document.body.classList.add('nav-open');
     }
 
     function closeMenu() {
       navMenu.classList.remove('open');
       navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open menu');
       document.body.classList.remove('nav-open');
     }
 
@@ -1508,6 +1815,20 @@
     closeModal.addEventListener('click', closeVideo);
 
     document.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab' && modal.classList.contains('open')) {
+        const focusable = modal.querySelectorAll('button, iframe');
+        const firstFocusable = focusable[0];
+        const lastFocusable = focusable[focusable.length - 1];
+
+        if (e.shiftKey && document.activeElement === firstFocusable) {
+          e.preventDefault();
+          lastFocusable.focus();
+        } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+          e.preventDefault();
+          firstFocusable.focus();
+        }
+      }
+
       if (e.key === 'Escape') {
         if (modal.classList.contains('open')) closeVideo();
         if (navMenu.classList.contains('open')) closeMenu();
@@ -1521,7 +1842,8 @@
     });
 
     document.getElementById('year').textContent = new Date().getFullYear();
-    renderVideos();
+    renderCuratedVideos();
+    loadLatestVideos();
   </script>
 </body>
 </html>
