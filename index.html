@@ -284,29 +284,11 @@
   .nav-menu a {
     color: var(--muted);
     transition: color .2s ease;
-    position: relative;
-  }
-
-  .nav-menu a::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--accent);
-    border-radius: 2px;
-    transition: width .25s ease;
   }
 
   .nav-menu a:hover,
   .nav-menu a.active {
     color: var(--ink);
-  }
-
-  .nav-menu a:hover::after,
-  .nav-menu a.active::after {
-    width: 100%;
   }
 
   .btn {
@@ -881,11 +863,11 @@
   }
 
   .verse-label {
-    font-size: 0.75rem;
-    letter-spacing: 0.15em;
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: rgba(255,245,234,0.6);
-    font-weight: 600;
+    color: var(--accent);
+    font-weight: 700;
     margin-bottom: 18px;
   }
 
