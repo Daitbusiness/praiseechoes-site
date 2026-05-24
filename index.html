@@ -1551,9 +1551,6 @@
         <div class="section-head reveal">
           <div>
             <h2>Music for prayer and reflection</h2>
-            <p>
-              New releases update automatically from YouTube, while the listener favorites below stay intentionally curated.
-            </p>
           </div>
           <a
             class="btn btn-secondary"
@@ -1579,10 +1576,7 @@
           <div>
             <div class="subsection-head reveal reveal-delay-2">
               <div>
-                <h3>Start here</h3>
-                <p>
-                  A hand-picked path into the heart of PraiseEchoes.
-                </p>
+                <h3>A Selection of Worship Songs</h3>
               </div>
             </div>
             <div class="video-grid reveal reveal-delay-3" id="curatedVideoGrid"></div>
@@ -1838,8 +1832,7 @@
 
         renderVideoCards(latestVideoGrid, videos.map(video => normalizeVideo(video, 'Latest Release')));
         latestStatus.textContent = data.updatedAt
-          ? `Updated from YouTube RSS on ${formatDate(data.updatedAt)}.`
-          : 'Updated from YouTube RSS.';
+          : '';
       } catch (error) {
         renderFallbackLatestVideos();
       }
