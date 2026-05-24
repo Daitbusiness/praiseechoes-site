@@ -4,6 +4,7 @@ import { dirname, resolve } from 'node:path';
 const CHANNEL_HANDLE = process.env.YOUTUBE_CHANNEL_HANDLE || '@PraiseEchoes';
 const CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID || '';
 const MAX_RESULTS = Number(process.env.YOUTUBE_MAX_RESULTS || 6);
+const MIN_DURATION_S = Number(process.env.YOUTUBE_MIN_DURATION_S || 60);
 const OUT_FILE = process.env.YOUTUBE_OUT_FILE || 'data/latest-videos.json';
 
 const textDecoder = new TextDecoder();
@@ -85,12 +86,13 @@ async function resolveChannelId() {
 
 function parseEntries(xml) {
   return Array.from(xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g))
-    .slice(0, MAX_RESULTS)
+    .slice(0, MAX_RESULTS * 2)  // fetch extra to compensate for filtered shorts
     .map(([, entry]) => {
       const id =
         firstMatch(entry, /<yt:videoId>([\s\S]*?)<\/yt:videoId>/) ||
         firstMatch(entry, /<id>yt:video:([\s\S]*?)<\/id>/);
       const title = cleanTitle(firstMatch(entry, /<title>([\s\S]*?)<\/title>/));
+      const duration = Number(firstMatch(entry, /<media:content[^>]*\sduration="(\d+)"/));
       const publishedAt = firstMatch(entry, /<published>([\s\S]*?)<\/published>/);
       const mediaDescription = firstMatch(entry, /<media:description>([\s\S]*?)<\/media:description>/);
       const summary = firstMatch(entry, /<summary>([\s\S]*?)<\/summary>/);
@@ -99,12 +101,16 @@ function parseEntries(xml) {
       return {
         id,
         title,
+        duration,
         description: description || 'A recent PraiseEchoes worship release for prayer and reflection.',
         label: 'Latest Release',
         publishedAt
       };
     })
-    .filter((video) => video.id && video.title);
+    .filter((video) => video.id && video.title)
+    .filter((video) => !video.duration || video.duration >= MIN_DURATION_S)
+    .slice(0, MAX_RESULTS)
+    .map(({ duration, ...rest }) => rest);  // strip internal duration field
 }
 
 async function main() {
