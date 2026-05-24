@@ -1567,7 +1567,6 @@
             <div class="subsection-head reveal">
               <div>
                 <h3>Latest from YouTube</h3>
-                <p id="latestStatus">Checking for recent releases...</p>
               </div>
             </div>
             <div class="video-grid reveal reveal-delay-1" id="latestVideoGrid"></div>
@@ -1714,8 +1713,7 @@
   
     const latestVideoGrid = document.getElementById('latestVideoGrid');
     const curatedVideoGrid = document.getElementById('curatedVideoGrid');
-    const latestStatus = document.getElementById('latestStatus');
-    const modal = document.getElementById('videoModal');
+const modal = document.getElementById('videoModal');
     const modalPlayer = document.getElementById('modalPlayer');
     const modalTitle = document.getElementById('modalTitle');
     const closeModal = document.getElementById('closeModal');
@@ -1818,7 +1816,6 @@
 
     function renderFallbackLatestVideos() {
       renderVideoCards(latestVideoGrid, fallbackLatestVideos);
-      latestStatus.textContent = 'Showing recent releases while the automatic feed refreshes.';
     }
 
     async function loadLatestVideos() {
@@ -1831,8 +1828,6 @@
         if (!videos.length) throw new Error('Latest video data is empty.');
 
         renderVideoCards(latestVideoGrid, videos.map(video => normalizeVideo(video, 'Latest Release')));
-        latestStatus.textContent = data.updatedAt
-          : '';
       } catch (error) {
         renderFallbackLatestVideos();
       }
