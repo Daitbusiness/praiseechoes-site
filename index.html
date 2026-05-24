@@ -34,9 +34,12 @@
     name="twitter:image"
     content="https://yt3.googleusercontent.com/X8q0CcuQgt5u0HzUIBdwi3S3f133Cgrvkef-sUwN3VmfOvucW5ilj3d0anGpzW1XNA6Iye-DAzw=w2276-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
   />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://yt3.googleusercontent.com" crossorigin />
   <link rel="preconnect" href="https://i.ytimg.com" crossorigin />
   <link rel="preconnect" href="https://www.youtube-nocookie.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700;800&display=swap" />
   <link
     rel="preload"
     as="image"
@@ -121,6 +124,8 @@
     --radius-lg: 22px;
     --radius-md: 18px;
     --max: 1240px;
+    --font-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --banner: url('https://yt3.googleusercontent.com/X8q0CcuQgt5u0HzUIBdwi3S3f133Cgrvkef-sUwN3VmfOvucW5ilj3d0anGpzW1XNA6Iye-DAzw=w2276-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj');
     --header-h: 84px;
   }
@@ -134,7 +139,7 @@
 
   body {
     margin: 0;
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: var(--font-body);
     color: var(--ink);
     background:
       radial-gradient(circle at top left, rgba(143,106,79,0.07), transparent 28%),
@@ -279,10 +284,29 @@
   .nav-menu a {
     color: var(--muted);
     transition: color .2s ease;
+    position: relative;
   }
 
-  .nav-menu a:hover {
+  .nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: width .25s ease;
+  }
+
+  .nav-menu a:hover,
+  .nav-menu a.active {
     color: var(--ink);
+  }
+
+  .nav-menu a:hover::after,
+  .nav-menu a.active::after {
+    width: 100%;
   }
 
   .btn {
@@ -379,24 +403,26 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     padding: 9px 15px;
     border-radius: 999px;
     background: rgba(255,255,255,0.10);
     border: 1px solid rgba(255,255,255,0.16);
     color: #fff1de;
-    font-size: 0.88rem;
-    letter-spacing: 0.02em;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
   }
 
   .hero-copy h1 {
-    margin: 0 0 18px;
+    margin: 0 0 16px;
     font-size: clamp(2.8rem, 5.4vw, 5.4rem);
-    line-height: 0.98;
-    letter-spacing: -0.05em;
-    font-family: Georgia, "Times New Roman", serif;
+    line-height: 0.96;
+    letter-spacing: -0.04em;
+    font-family: var(--font-heading);
     font-weight: 700;
   }
 
@@ -423,26 +449,37 @@
   }
 
   .signature-card {
-    padding: 16px 16px 14px;
+    padding: 18px 18px 16px;
     border-radius: 20px;
-    background: rgba(255,255,255,0.10);
-    border: 1px solid rgba(255,255,255,0.14);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    transition: background .25s ease, transform .25s ease;
+  }
+
+  .signature-card:hover {
+    background: rgba(255,255,255,0.14);
+    transform: translateY(-2px);
   }
 
   .signature-card strong {
     display: block;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     margin-bottom: 5px;
     color: #fff6eb;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 700;
   }
 
   .signature-card span {
     display: block;
-    color: rgba(255,245,234,0.82);
-    font-size: 0.9rem;
-    line-height: 1.5;
+    color: rgba(255,245,234,0.78);
+    font-size: 0.88rem;
+    line-height: 1.55;
+    font-family: var(--font-heading);
+    font-style: italic;
   }
 
   .hero-feature {
@@ -585,12 +622,28 @@
     margin-bottom: 26px;
   }
 
+  .section-head {
+    position: relative;
+  }
+
+  .section-head::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin-bottom: 18px;
+    opacity: 0.5;
+  }
+
   .section-head h2 {
     margin: 0;
-    font-size: clamp(1.95rem, 3vw, 3rem);
-    letter-spacing: -0.04em;
-    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 3.2vw, 3.2rem);
+    letter-spacing: -0.03em;
+    font-family: var(--font-heading);
     font-weight: 700;
+    line-height: 1.15;
   }
 
   .section-head p {
@@ -613,7 +666,7 @@
   .panel h3 {
     margin: 0 0 12px;
     font-size: 1.2rem;
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: var(--font-heading);
     font-weight: 700;
   }
 
@@ -681,7 +734,7 @@
     margin: 0;
     font-size: clamp(1.35rem, 2vw, 1.9rem);
     letter-spacing: -0.03em;
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: var(--font-heading);
   }
 
   .subsection-head p,
@@ -728,6 +781,11 @@
     inset: 0;
     background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.14) 100%);
     pointer-events: none;
+    transition: opacity .3s ease;
+  }
+
+  .video-card:hover .thumb::after {
+    opacity: 0.7;
   }
 
   .play-badge {
@@ -735,22 +793,29 @@
     left: 16px;
     bottom: 16px;
     z-index: 2;
-    width: 56px;
-    height: 56px;
+    width: 48px;
+    height: 48px;
     border-radius: 999px;
     display: grid;
     place-items: center;
-    background: rgba(255, 250, 245, 0.88);
+    background: rgba(255, 250, 245, 0.92);
     color: var(--accent-deep);
     border: 1px solid rgba(41,31,24,0.08);
     box-shadow: 0 14px 30px rgba(0,0,0,0.14);
-    font-size: 1rem;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: transform .25s ease, background .25s ease;
+  }
+
+  .video-card:hover .play-badge {
+    transform: scale(1.08);
+    background: #fffdfa;
   }
 
   .play-badge svg,
   .poster-play svg {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     margin-left: 2px;
   }
 
@@ -774,12 +839,14 @@
     margin: 0;
     font-size: 1.08rem;
     line-height: 1.45;
+    font-weight: 700;
   }
 
   .video-body p {
     margin: 0;
     color: var(--muted);
-    font-size: 0.96rem;
+    font-size: 0.94rem;
+    line-height: 1.6;
   }
 
   .actions {
@@ -814,33 +881,49 @@
   }
 
   .verse-label {
-    font-size: 0.82rem;
-    letter-spacing: 0.12em;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 700;
-    margin-bottom: 16px;
+    color: rgba(255,245,234,0.6);
+    font-weight: 600;
+    margin-bottom: 18px;
   }
 
   .quote-box {
     border-radius: 34px;
-    padding: 38px;
+    padding: 48px 38px;
     text-align: center;
+    position: relative;
     background:
-      linear-gradient(180deg, rgba(255,252,248,0.86), rgba(255,250,245,0.74)),
+      linear-gradient(180deg, rgba(255,252,248,0.88), rgba(255,250,245,0.76)),
       var(--banner) center/cover no-repeat;
     border: 1px solid rgba(41,31,24,0.07);
     box-shadow: var(--shadow);
   }
 
+  .quote-box::before {
+    content: '\201C';
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-heading);
+    font-size: clamp(4rem, 6vw, 7rem);
+    line-height: 1;
+    color: rgba(166, 124, 82, 0.12);
+    pointer-events: none;
+  }
+
   .quote-box p {
     margin: 0 auto;
-    max-width: 32ch;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.8rem, 3vw, 3rem);
-    line-height: 1.28;
-    letter-spacing: -0.03em;
-    color: #33261d;
+    max-width: 34ch;
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 2.6vw, 2.6rem);
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    color: #2d2119;
+    font-style: italic;
+    font-weight: 400;
   }
 
   .closing {
@@ -849,19 +932,21 @@
 
   .closing-box {
     border-radius: 36px;
-    padding: 34px;
+    padding: 36px;
     display: grid;
     grid-template-columns: 1.02fr 0.98fr;
-    gap: 22px;
+    gap: 24px;
     align-items: center;
+    border: 1px solid rgba(166, 124, 82, 0.08);
   }
 
   .closing-box h2 {
     margin: 0 0 12px;
     font-size: clamp(1.9rem, 3vw, 3.1rem);
-    letter-spacing: -0.04em;
-    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: -0.03em;
+    font-family: var(--font-heading);
     font-weight: 700;
+    line-height: 1.15;
   }
 
   .closing-box p {
@@ -878,9 +963,10 @@
   }
 
   .site-footer {
-    padding: 18px 0 38px;
-    border-top: 1px solid rgba(41,31,24,0.08);
+    padding: 24px 0 40px;
+    border-top: 1px solid rgba(41,31,24,0.06);
     color: var(--muted);
+    font-size: 0.9rem;
   }
 
   .footer-row {
@@ -1919,6 +2005,24 @@ const modal = document.getElementById('videoModal');
         if (window.innerWidth <= 900) closeMenu();
       });
     });
+
+    // —— Scroll spy for nav ——
+    const navLinks = navMenu.querySelectorAll('a[href^="#"]');
+    const sections = [...navLinks].map(link => document.getElementById(link.getAttribute('href').slice(1))).filter(Boolean);
+
+    function updateActiveNav() {
+      const scrollY = window.scrollY + 130;
+      let current = sections[0];
+      for (const section of sections) {
+        if (section.offsetTop <= scrollY) current = section;
+      }
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href').slice(1) === current?.id);
+      });
+    }
+
+    updateActiveNav();
+    document.addEventListener('scroll', updateActiveNav, { passive: true });
 
     document.addEventListener('click', (e) => {
       const playBtn = e.target.closest('.play-here');
