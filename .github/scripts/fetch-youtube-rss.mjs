@@ -40,11 +40,50 @@ function trimText(value = '', maxLength = 170) {
 }
 
 function cleanTitle(value = '') {
-  return removeHashtags(value).replace(/\s+\|?\s*PraiseEchoes$/i, '').trim();
+  return removeHashtags(value)
+    .replace(/\s+\|?\s*PraiseEchoes$/i, '')
+    .replace(/\s*[|—–-]\s*PraiseEchoes\s*$/i, '')
+    .replace(/\s*\|?\s*PraiseEchoes\s*$/, '')
+    .trim();
 }
 
 function cleanDescription(value = '') {
-  return trimText(removeHashtags(value), 180);
+  // Strip URLs, social handles, email addresses
+  let text = value
+    .replace(/https?:\/\/[^\s]+/g, ' ')
+    .replace(/@\w+/g, ' ')
+    .replace(/[\w.+-]+@\w+\.\w+/g, ' ')
+    .replace(/(^|\s)#[^\s#]+/g, ' ');
+
+  // Keep only lines with real substance (> 30 chars after cleaning)
+  text = text.split('\n')
+    .map(line => removeHashtags(stripTags(line)).trim())
+    .filter(line => line.length > 30)
+    .join(' ');
+
+  // Collapse whitespace
+  text = text.replace(/\s+/g, ' ').trim();
+
+  // Short truncation for display
+  return trimText(text, 120);
+}
+
+function generateDescription(title) {
+  const lower = title.toLowerCase();
+
+  if (/[一-鿿]/.test(title) && lower.includes('worship')) {
+    return 'A Chinese worship song of praise and devotion.';
+  }
+  if (/[一-鿿]/.test(title)) {
+    return 'A Chinese worship song for prayer and reflection.';
+  }
+  if (lower.includes('piano') || lower.includes('instrumental')) {
+    return 'A gentle instrumental piece for prayer, reflection, and quiet peace.';
+  }
+  if (lower.includes('worship')) {
+    return 'A worship song for quiet devotion and heartfelt praise.';
+  }
+  return 'A PraiseEchoes worship release for prayer and quiet reflection.';
 }
 
 function firstMatch(value, pattern) {
@@ -96,13 +135,14 @@ function parseEntries(xml) {
       const publishedAt = firstMatch(entry, /<published>([\s\S]*?)<\/published>/);
       const mediaDescription = firstMatch(entry, /<media:description>([\s\S]*?)<\/media:description>/);
       const summary = firstMatch(entry, /<summary>([\s\S]*?)<\/summary>/);
-      const description = cleanDescription(stripTags(mediaDescription || summary));
+      const rawDescription = cleanDescription(stripTags(mediaDescription || summary));
+      const description = rawDescription.length > 20 ? rawDescription : generateDescription(title);
 
       return {
         id,
         title,
         duration,
-        description: description || 'A recent PraiseEchoes worship release for prayer and reflection.',
+        description,
         label: 'Latest Release',
         publishedAt
       };
