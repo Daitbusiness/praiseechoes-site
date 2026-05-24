@@ -1255,9 +1255,97 @@
       font-size: 0.95rem;
     }
   }
+
+  /* —— Ambient light orbs —— */
+  .ambient-orbs {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .ambient-orbs .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.35;
+    will-change: transform;
+  }
+
+  .ambient-orbs .orb:nth-child(1) {
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(143,106,79,0.12), transparent 70%);
+    top: -200px;
+    left: -150px;
+    animation: orb-float-1 22s ease-in-out infinite;
+  }
+
+  .ambient-orbs .orb:nth-child(2) {
+    width: 550px;
+    height: 550px;
+    background: radial-gradient(circle, rgba(127,135,120,0.10), transparent 70%);
+    bottom: -150px;
+    right: -100px;
+    animation: orb-float-2 28s ease-in-out infinite;
+  }
+
+  .ambient-orbs .orb:nth-child(3) {
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(204,176,145,0.08), transparent 70%);
+    top: 40%;
+    left: 30%;
+    animation: orb-float-3 20s ease-in-out infinite;
+  }
+
+  @keyframes orb-float-1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(100px, 80px) scale(1.12); }
+    66% { transform: translate(-50px, 40px) scale(0.92); }
+  }
+
+  @keyframes orb-float-2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(-80px, -60px) scale(1.08); }
+    66% { transform: translate(60px, -100px) scale(0.95); }
+  }
+
+  @keyframes orb-float-3 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(-30px, -60px) scale(1.15); }
+    66% { transform: translate(40px, 20px) scale(0.9); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ambient-orbs { display: none; }
+  }
+
+  /* —— Scroll reveal —— */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
+                transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.12s; }
+  .reveal-delay-2 { transition-delay: 0.24s; }
+  .reveal-delay-3 { transition-delay: 0.36s; }
 </style>
 </head>
 <body>
+  <div class="ambient-orbs" aria-hidden="true">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="#top" aria-label="PraiseEchoes home">
@@ -1414,21 +1502,21 @@
 
     <section id="about">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <div>
             <h2>The heart of PraiseEchoes</h2>
           </div>
         </div>
 
         <div class="about-grid">
-          <article class="panel surface">
+          <article class="panel surface reveal">
             <h3>Where worship meets quiet beauty</h3>
             <p>
              PraiseEchoes brings together original Christian songs, Chinese worship, Scripture-inspired writing, and devotional piano in a space designed to feel peaceful, refined, and deeply personal. More than simply releasing music, the heart of PraiseEchoes is to offer a listening experience marked by beauty, sincerity, and the quiet presence of God.
             </p>
           </article>
 
-          <article class="panel surface">
+          <article class="panel surface reveal reveal-delay-1">
             <h3>What listeners can expect</h3>
             <div class="feature-list">
               <div class="feature-item">
@@ -1460,7 +1548,7 @@
 
     <section id="music">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <div>
             <h2>Music for prayer and reflection</h2>
             <p>
@@ -1479,17 +1567,17 @@
 
         <div class="music-stack">
           <div>
-            <div class="subsection-head">
+            <div class="subsection-head reveal">
               <div>
                 <h3>Latest from YouTube</h3>
                 <p id="latestStatus">Checking for recent releases...</p>
               </div>
             </div>
-            <div class="video-grid" id="latestVideoGrid"></div>
+            <div class="video-grid reveal reveal-delay-1" id="latestVideoGrid"></div>
           </div>
 
           <div>
-            <div class="subsection-head">
+            <div class="subsection-head reveal reveal-delay-2">
               <div>
                 <h3>Start here</h3>
                 <p>
@@ -1497,7 +1585,7 @@
                 </p>
               </div>
             </div>
-            <div class="video-grid" id="curatedVideoGrid"></div>
+            <div class="video-grid reveal reveal-delay-3" id="curatedVideoGrid"></div>
           </div>
         </div>
       </div>
@@ -1505,7 +1593,7 @@
 
     <section class="quote-band">
       <div class="container">
-        <div class="quote-box">
+        <div class="quote-box reveal">
           <p>
             The heavens declare the glory of God; the skies proclaim the work of his hands. — Psalm 19:1
           </p>
@@ -1515,7 +1603,7 @@
 
     <section class="closing" id="connect">
       <div class="container">
-        <div class="closing-box surface">
+        <div class="closing-box surface reveal">
           <div>
             <h2>Stay close to each new release.</h2>
             <p>
@@ -1864,6 +1952,18 @@
         closeMenu();
       }
     });
+
+    // —— Scroll reveal ——
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
     document.getElementById('year').textContent = new Date().getFullYear();
     renderCuratedVideos();
