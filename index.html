@@ -103,18 +103,18 @@
     --line: rgba(41, 31, 24, 0.10);
     --line-soft: rgba(255, 255, 255, 0.22);
 
-    --card: rgba(255, 251, 247, 0.78);
-    --card-strong: rgba(255, 252, 249, 0.90);
+    --card: rgba(255, 251, 247, 0.84);
+    --card-strong: rgba(255, 252, 249, 0.92);
 
-    --accent: #8f6a4f;
-    --accent-deep: #6f5038;
-    --accent-light: #ccb091;
+    --accent: #a67c52;
+    --accent-deep: #7f5a38;
+    --accent-light: #d4b48c;
 
     --olive: #7f8778;
     --olive-soft: #a9b0a2;
 
-    --shadow: 0 24px 80px rgba(43, 31, 21, 0.10);
-    --shadow-strong: 0 34px 90px rgba(22, 14, 9, 0.20);
+    --shadow: 0 24px 80px rgba(43, 31, 21, 0.08);
+    --shadow-strong: 0 34px 90px rgba(22, 14, 9, 0.18);
 
     --radius-2xl: 34px;
     --radius-xl: 28px;
@@ -305,9 +305,13 @@
   }
 
   .btn-primary {
-    background: linear-gradient(135deg, #8f6a4f, #b08a67);
+    background: linear-gradient(135deg, #a67c52, #c9a06c);
     color: #fffdfa;
-    box-shadow: 0 16px 30px rgba(111, 80, 56, 0.22);
+    box-shadow: 0 16px 30px rgba(111, 80, 56, 0.20);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 20px 40px rgba(111, 80, 56, 0.30), 0 0 0 1px rgba(166, 124, 82, 0.15);
   }
 
   .nav-menu a.btn-primary,
@@ -319,6 +323,12 @@
     background: rgba(255,255,255,0.72);
     border-color: rgba(41, 31, 24, 0.09);
     color: var(--ink);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255,255,255,0.90);
+    border-color: rgba(166, 124, 82, 0.20);
+    box-shadow: 0 8px 20px rgba(43, 31, 21, 0.06);
   }
 
   .hero {
@@ -696,6 +706,7 @@
   .video-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 30px 70px rgba(54,37,23,0.14);
+    border-color: rgba(166, 124, 82, 0.15);
   }
 
   .thumb {
