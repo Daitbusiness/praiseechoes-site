@@ -1,8 +1,15 @@
 {
-  "updatedAt": "2026-05-26T10:30:49.635Z",
+  "updatedAt": "2026-05-26T16:12:11.054Z",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC44B4Jzwvz4pbuZW9tuSjAg",
   "channelId": "UC44B4Jzwvz4pbuZW9tuSjAg",
   "videos": [
+    {
+      "id": "Dzp0e7_LGTw",
+      "title": "父啊 我安息在祢愛裡 | Rest in Your Love, Father｜溫暖敬拜詩歌｜小羊與耶穌的治癒MV｜中英文敬拜讚美詩",
+      "description": "《父啊 我安息在祢愛裡》是一首溫暖、安靜、療癒的敬拜詩歌，獻給每一個疲憊、軟弱、正在尋找安息的人。...",
+      "label": "Latest Release",
+      "publishedAt": "2026-05-26T12:16:16+00:00"
+    },
     {
       "id": "l_nnLz4lnJ8",
       "title": "你会怎么回答/ How Would You Answer?",
@@ -37,13 +44,6 @@
       "description": "你尋找我 You Search for Me | 好牧人敬拜詩歌 | 基督教讚美詩 | 安靜醫治 Worship Song 當我們迷失、軟弱、害怕、找不到方向時， 主耶穌這位好牧人，仍親自來尋找我們。 這首敬拜詩歌是根據「路加福音...",
       "label": "Latest Release",
       "publishedAt": "2026-04-29T11:56:26+00:00"
-    },
-    {
-      "id": "59a8UJKLvrk",
-      "title": "当你忧虑时｜1小时中文敬拜诗歌｜诗篇祷告・交托重担・平安医治｜",
-      "description": "當你心裡充滿憂慮、疲憊、不安， 願這1小時詩篇敬拜陪你安靜來到神面前。 這張詩篇敬拜專輯，特別為正在經歷壓力、失眠、軟弱、等待和心裡煩亂的人而創作。...",
-      "label": "Latest Release",
-      "publishedAt": "2026-04-28T07:14:31+00:00"
     }
   ]
 }
