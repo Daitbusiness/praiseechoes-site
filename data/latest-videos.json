@@ -1,8 +1,15 @@
 {
-  "updatedAt": "2026-06-02T10:56:56.852Z",
+  "updatedAt": "2026-06-02T16:57:11.570Z",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC44B4Jzwvz4pbuZW9tuSjAg",
   "channelId": "UC44B4Jzwvz4pbuZW9tuSjAg",
   "videos": [
+    {
+      "id": "wC8a38BGydY",
+      "title": "【敬拜詩歌】我家要敬拜祢 (My House Will Worship You) － 全家事奉主・溫暖家庭敬拜詩歌",
+      "description": "這是一首為家庭守望與全家敬拜創作的詩歌。 從清晨的晨光到餐桌旁的安息，從腳步的引導到每日新鮮的憐憫， 宣告「我和我家，我們必定事奉耶和華」。 經文默想： 📖 約書亞記24:15 「至於我和我家，我們必定事奉耶和華。」 📖...",
+      "label": "Latest Release",
+      "publishedAt": "2026-06-02T11:59:23+00:00"
+    },
     {
       "id": "Dzp0e7_LGTw",
       "title": "父啊 我安息在祢愛裡 | Rest in Your Love, Father｜溫暖敬拜詩歌｜小羊與耶穌的治癒MV｜中英文敬拜讚美詩",
@@ -37,13 +44,6 @@
       "description": "A Chinese worship song for prayer and reflection.",
       "label": "Latest Release",
       "publishedAt": "2026-04-29T20:43:33+00:00"
-    },
-    {
-      "id": "gmQKLXZ-a9Y",
-      "title": "你寻找我 You Search for Me｜好牧人原创敬拜诗歌｜安静医治・华语敬拜｜",
-      "description": "你尋找我 You Search for Me | 好牧人敬拜詩歌 | 基督教讚美詩 | 安靜醫治 Worship Song 當我們迷失、軟弱、害怕、找不到方向時， 主耶穌這位好牧人，仍親自來尋找我們。 這首敬拜詩歌是根據「路加福音...",
-      "label": "Latest Release",
-      "publishedAt": "2026-04-29T11:56:26+00:00"
     }
   ]
 }
