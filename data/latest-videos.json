@@ -1,8 +1,15 @@
 {
-  "updatedAt": "2026-06-05T15:29:41.999Z",
+  "updatedAt": "2026-06-05T20:16:09.759Z",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC44B4Jzwvz4pbuZW9tuSjAg",
   "channelId": "UC44B4Jzwvz4pbuZW9tuSjAg",
   "videos": [
+    {
+      "id": "jbEegaQeV0w",
+      "title": "曠野中的道路 | A Way in the Wilderness | 中英文敬拜讚美詩 | 🚨 必聽！曠野中開道路的神",
+      "description": "曠野中的道路 | A Way in the Wilderness 在荒涼的曠野中，神仍然開道路；在乾涸的沙漠裡，祂仍能使生命江河湧流。 這首《曠野中的道路》是一首關於信靠、更新與盼望的中文敬拜詩歌。...",
+      "label": "Latest Release",
+      "publishedAt": "2026-06-05T15:35:05+00:00"
+    },
     {
       "id": "wC8a38BGydY",
       "title": "【敬拜詩歌】我家要敬拜祢 (My House Will Worship You) － 全家事奉主・溫暖家庭敬拜詩歌",
@@ -37,13 +44,6 @@
       "description": "當夜深了，心卻還沒有安靜下來， 願這張《夜裡，祢仍在》陪你慢慢回到主的同在裡。 這是一張適合安靜敬拜、睡前祈禱、夜間聆聽、默想神話語的原創讚美詩專輯。 願每一首歌都提醒你：黑夜不能遮蓋祂的愛，眼淚不會被祂忘記，你也從來不是獨自一人。...",
       "label": "Latest Release",
       "publishedAt": "2026-04-30T08:57:52+00:00"
-    },
-    {
-      "id": "IzeohCyejog",
-      "title": "祢寻找我 The Good Shepherd",
-      "description": "A Chinese worship song for prayer and reflection.",
-      "label": "Latest Release",
-      "publishedAt": "2026-04-29T20:43:33+00:00"
     }
   ]
 }
