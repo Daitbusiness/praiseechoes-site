@@ -19,6 +19,7 @@ jobs:
         run: node .github/scripts/fetch-youtube-rss.mjs
         env:
           YOUTUBE_CHANNEL_HANDLE: '@PraiseEchoes'
+          YOUTUBE_CHANNEL_ID: 'UC44B4Jzwvz4pbuZW9tuSjAg'
           YOUTUBE_MAX_RESULTS: '6'
 
       - name: Commit updated video data

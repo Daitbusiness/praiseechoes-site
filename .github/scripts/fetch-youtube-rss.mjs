@@ -6,6 +6,8 @@ const CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID || '';
 const MAX_RESULTS = Number(process.env.YOUTUBE_MAX_RESULTS || 6);
 const MIN_DURATION_S = Number(process.env.YOUTUBE_MIN_DURATION_S || 60);
 const OUT_FILE = process.env.YOUTUBE_OUT_FILE || 'data/latest-videos.json';
+const FETCH_RETRIES = Number(process.env.YOUTUBE_FETCH_RETRIES || 3);
+const RETRY_DELAY_MS = Number(process.env.YOUTUBE_RETRY_DELAY_MS || 1200);
 
 const textDecoder = new TextDecoder();
 
@@ -91,23 +93,59 @@ function firstMatch(value, pattern) {
   return match ? decodeHtml(match[1]) : '';
 }
 
-async function fetchText(url) {
-  const response = await fetch(url, {
-    headers: {
-      'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-      'user-agent': 'PraiseEchoes site updater'
-    }
-  });
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-  if (!response.ok) {
-    throw new Error(`Fetch failed for ${url}: ${response.status} ${response.statusText}`);
+async function readPreviousData() {
+  const value = await readFile(OUT_FILE, 'utf8').catch(() => '');
+
+  if (!value) return null;
+
+  try {
+    return JSON.parse(value);
+  } catch {
+    return null;
+  }
+}
+
+async function fetchText(url) {
+  let lastError;
+
+  for (let attempt = 1; attempt <= FETCH_RETRIES; attempt += 1) {
+    try {
+      const response = await fetch(url, {
+        headers: {
+          'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+          'user-agent': 'PraiseEchoes site updater'
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Fetch failed for ${url}: ${response.status} ${response.statusText}`);
+      }
+
+      return textDecoder.decode(await response.arrayBuffer());
+    } catch (error) {
+      lastError = error;
+
+      if (attempt < FETCH_RETRIES) {
+        await sleep(RETRY_DELAY_MS * attempt);
+      }
+    }
   }
 
-  return textDecoder.decode(await response.arrayBuffer());
+  throw lastError;
 }
 
 async function resolveChannelId() {
   if (CHANNEL_ID) return CHANNEL_ID;
+
+  const previous = await readPreviousData();
+
+  if (previous?.channelId) {
+    return previous.channelId;
+  }
 
   const handle = CHANNEL_HANDLE.startsWith('@') ? CHANNEL_HANDLE : `@${CHANNEL_HANDLE}`;
   const html = await fetchText(`https://www.youtube.com/${handle}`);
