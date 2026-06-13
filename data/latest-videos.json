@@ -1,8 +1,15 @@
 {
-  "updatedAt": "2026-06-13T04:54:24.695Z",
+  "updatedAt": "2026-06-13T09:38:34.277Z",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC44B4Jzwvz4pbuZW9tuSjAg",
   "channelId": "UC44B4Jzwvz4pbuZW9tuSjAg",
   "videos": [
+    {
+      "id": "11RRrCuzUTk",
+      "title": "數算｜一一數算主恩典",
+      "description": "一天一天，數算主恩典。 「不可忘記祂的一切恩惠。」詩篇 103:2 願這段副歌提醒你回頭看見神一路的供應與信實。 完整詩歌：Count Them One by One 訂閱 PraiseEchoes，聆聽更多感恩敬拜與原創華語讚美詩。",
+      "label": "Latest Release",
+      "publishedAt": "2026-06-13T06:00:30+00:00"
+    },
     {
       "id": "5AkZFnHjSGg",
       "title": "放下｜把重擔交給神",
@@ -37,13 +44,6 @@
       "description": "忙了一整天，走出門已是夜晚。 城市的燈火、安靜的星空、流動的車河，彷彿都在提醒我們：神從未離開。...",
       "label": "Latest Release",
       "publishedAt": "2026-06-08T11:42:52+00:00"
-    },
-    {
-      "id": "jbEegaQeV0w",
-      "title": "曠野中的道路 | A Way in the Wilderness | 中英文敬拜讚美詩 | 🚨 必聽！曠野中開道路的神",
-      "description": "曠野中的道路 | A Way in the Wilderness 在荒涼的曠野中，神仍然開道路；在乾涸的沙漠裡，祂仍能使生命江河湧流。 這首《曠野中的道路》是一首關於信靠、更新與盼望的中文敬拜詩歌。...",
-      "label": "Latest Release",
-      "publishedAt": "2026-06-05T15:35:05+00:00"
     }
   ]
 }
