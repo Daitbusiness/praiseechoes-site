@@ -1,8 +1,15 @@
 {
-  "updatedAt": "2026-06-14T05:11:07.103Z",
+  "updatedAt": "2026-06-14T09:57:15.746Z",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC44B4Jzwvz4pbuZW9tuSjAg",
   "channelId": "UC44B4Jzwvz4pbuZW9tuSjAg",
   "videos": [
+    {
+      "id": "8rSI5TRzMFM",
+      "title": "夜裡祢與我同行｜疲憊的心回到神愛裡",
+      "description": "夜再深，祂仍與你同行。 願這段副歌在疲憊的時候，提醒你不是一個人。 完整詩歌：You Walk With Me at Night 訂閱 PraiseEchoes，聆聽更多安靜敬拜與華語讚美詩。",
+      "label": "Latest Release",
+      "publishedAt": "2026-06-14T06:00:30+00:00"
+    },
     {
       "id": "11RRrCuzUTk",
       "title": "數算｜一一數算主恩典",
@@ -37,13 +44,6 @@
       "description": "有時候，我們會一直停留在「如果」裡： 如果當時沒有轉身， 如果那句承諾沒有當真， 如果我沒有犯那個錯…… 但神的恩典不是停在過去。 祂能使用我們走錯的路、流過的淚、破碎的片段， 重新編織成祂美好的旨意。...",
       "label": "Latest Release",
       "publishedAt": "2026-06-09T10:48:04+00:00"
-    },
-    {
-      "id": "cvJ_gR-77bo",
-      "title": "夜裡祢與我同行｜下班後最安慰的敬拜詩歌｜疲憊的心，回到神愛裡｜Christian Worship Song | 讚美詩 | 基督教音樂 | 安靜敬拜 | 中英文詩歌",
-      "description": "忙了一整天，走出門已是夜晚。 城市的燈火、安靜的星空、流動的車河，彷彿都在提醒我們：神從未離開。...",
-      "label": "Latest Release",
-      "publishedAt": "2026-06-08T11:42:52+00:00"
     }
   ]
 }
