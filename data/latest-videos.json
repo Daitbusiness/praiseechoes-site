@@ -1,8 +1,15 @@
 {
-  "updatedAt": "2026-06-15T21:25:49.208Z",
+  "updatedAt": "2026-06-16T11:36:59.922Z",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC44B4Jzwvz4pbuZW9tuSjAg",
   "channelId": "UC44B4Jzwvz4pbuZW9tuSjAg",
   "videos": [
+    {
+      "id": "uR33u2RT7fk",
+      "title": "我家要敬拜祢｜我和我家同心回應",
+      "description": "我和我家，願一生事奉祢。 願這段副歌成為家庭敬拜與禱告的回應。 完整詩歌：My House Will Worship You 訂閱 PraiseEchoes，聆聽更多家庭敬拜與原創華語讚美詩。",
+      "label": "Latest Release",
+      "publishedAt": "2026-06-16T06:00:01+00:00"
+    },
     {
       "id": "H2KaV-gqOYg",
       "title": "面對面 Face to Face | 不再有眼淚 不再有黑夜 | 榮耀盼望敬拜詩歌 | 基督教讚美詩",
@@ -37,13 +44,6 @@
       "description": "把一切交給祂，不再獨自背負。 願這段副歌陪你在疲憊中放下重擔，回到主面前。 完整詩歌：Lay It Down 訂閱 PraiseEchoes，聆聽更多原創華語敬拜詩歌。",
       "label": "Latest Release",
       "publishedAt": "2026-06-12T06:00:37+00:00"
-    },
-    {
-      "id": "-oTklzpxeHg",
-      "title": "父啊，我安息在祢愛裡｜祢愛永不放開我",
-      "description": "祂的愛不會放開你。 願這段副歌陪你安靜下來，重新回到天父的愛裡。 完整詩歌：Rest in Your Love, Father 訂閱 PraiseEchoes，聆聽更多安靜敬拜與原創華語讚美詩。",
-      "label": "Latest Release",
-      "publishedAt": "2026-06-11T06:00:32+00:00"
     }
   ]
 }
