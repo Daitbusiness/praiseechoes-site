@@ -1,8 +1,15 @@
 {
-  "updatedAt": "2026-06-16T21:21:41.027Z",
+  "updatedAt": "2026-06-17T11:18:40.119Z",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC44B4Jzwvz4pbuZW9tuSjAg",
   "channelId": "UC44B4Jzwvz4pbuZW9tuSjAg",
   "videos": [
+    {
+      "id": "bawC1IQ17YQ",
+      "title": "面對面｜不再有眼淚不再有黑夜",
+      "description": "中文歌名：面對面 English title: Face to Face 原視頻： 一首從永恆盼望而生的敬拜詩歌，唱出那一天我們要面對面看見主。 「神要擦去他們一切的眼淚。」啟示錄 21:4 訂閱...",
+      "label": "Latest Release",
+      "publishedAt": "2026-06-17T06:00:00+00:00"
+    },
     {
       "id": "uR33u2RT7fk",
       "title": "我家要敬拜祢｜我和我家同心回應",
@@ -37,13 +44,6 @@
       "description": "一天一天，數算主恩典。 「不可忘記祂的一切恩惠。」詩篇 103:2 願這段副歌提醒你回頭看見神一路的供應與信實。 完整詩歌：Count Them One by One 訂閱 PraiseEchoes，聆聽更多感恩敬拜與原創華語讚美詩。",
       "label": "Latest Release",
       "publishedAt": "2026-06-13T06:00:30+00:00"
-    },
-    {
-      "id": "5AkZFnHjSGg",
-      "title": "放下｜把重擔交給神",
-      "description": "把一切交給祂，不再獨自背負。 願這段副歌陪你在疲憊中放下重擔，回到主面前。 完整詩歌：Lay It Down 訂閱 PraiseEchoes，聆聽更多原創華語敬拜詩歌。",
-      "label": "Latest Release",
-      "publishedAt": "2026-06-12T06:00:37+00:00"
     }
   ]
 }
