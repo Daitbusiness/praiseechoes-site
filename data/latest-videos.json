@@ -1,8 +1,15 @@
 {
-  "updatedAt": "2026-06-20T04:42:35.574Z",
+  "updatedAt": "2026-06-20T09:44:34.348Z",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC44B4Jzwvz4pbuZW9tuSjAg",
   "channelId": "UC44B4Jzwvz4pbuZW9tuSjAg",
   "videos": [
+    {
+      "id": "NnaYoP7nZwg",
+      "title": "唯獨耶穌｜祂是道路真理生命",
+      "description": "唯獨耶穌 / Only Jesus 定睛耶稣，在软弱中得力量、在迷茫中得方向，并在祂的名里重新看见盼望。 经文：「我就是道路、真理、生命。」約翰福音 14:6 观看完整视频： 欢迎订阅...",
+      "label": "Latest Release",
+      "publishedAt": "2026-06-20T09:28:22+00:00"
+    },
     {
       "id": "QbkEis4Bi0c",
       "title": "我心屬於祢｜My Heart Belongs to You",
@@ -37,13 +44,6 @@
       "description": "在曠野裡，神仍然開道路。 願這段副歌幫助你在看不清前方時，仍然選擇跟隨祂。 完整詩歌：A Way in the Wilderness 訂閱 PraiseEchoes，聆聽更多原創華語敬拜詩歌。",
       "label": "Latest Release",
       "publishedAt": "2026-06-15T06:00:16+00:00"
-    },
-    {
-      "id": "8rSI5TRzMFM",
-      "title": "夜裡祢與我同行｜疲憊的心回到神愛裡",
-      "description": "夜再深，祂仍與你同行。 願這段副歌在疲憊的時候，提醒你不是一個人。 完整詩歌：You Walk With Me at Night 訂閱 PraiseEchoes，聆聽更多安靜敬拜與華語讚美詩。",
-      "label": "Latest Release",
-      "publishedAt": "2026-06-14T06:00:30+00:00"
     }
   ]
 }
