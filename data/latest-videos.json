@@ -1,8 +1,15 @@
 {
-  "updatedAt": "2026-06-20T19:58:07.671Z",
+  "updatedAt": "2026-06-21T05:20:28.299Z",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC44B4Jzwvz4pbuZW9tuSjAg",
   "channelId": "UC44B4Jzwvz4pbuZW9tuSjAg",
   "videos": [
+    {
+      "id": "YS3tEEoQ9c4",
+      "title": "《大馬士革的逆轉》青少年主日學 Rap｜掃羅變保羅｜使徒行傳9–10",
+      "description": "《大馬士革的逆轉》是一首專為青少年主日學創作的中英雙語基督教說唱歌曲，內容根據《使徒行傳》第9–10章改編。 這首歌用年輕人容易接受的 Rap、節奏鼓點、電影感弦樂和中英雙語副歌，帶領青少年認識兩個重要的聖經故事：...",
+      "label": "Latest Release",
+      "publishedAt": "2026-06-20T22:48:17+00:00"
+    },
     {
       "id": "NnaYoP7nZwg",
       "title": "唯獨耶穌｜祂是道路真理生命",
@@ -37,13 +44,6 @@
       "description": "這是一首從永恆盼望而生的敬拜詩歌。 我們仍在短暫的帳棚裡嘆息，但心早已屬於那座明亮的城。 那一天，我們要面對面看見祂——羔羊成為我們唯一的真光。 不再有眼淚，不再有黑夜，舊事已過，一切都變成新的。 🎵 歌詞 Lyrics [Verse...",
       "label": "Latest Release",
       "publishedAt": "2026-06-15T18:01:37+00:00"
-    },
-    {
-      "id": "4xAen-a5Zw4",
-      "title": "曠野中的道路｜祢必在曠野中開道路",
-      "description": "在曠野裡，神仍然開道路。 願這段副歌幫助你在看不清前方時，仍然選擇跟隨祂。 完整詩歌：A Way in the Wilderness 訂閱 PraiseEchoes，聆聽更多原創華語敬拜詩歌。",
-      "label": "Latest Release",
-      "publishedAt": "2026-06-15T06:00:16+00:00"
     }
   ]
 }
