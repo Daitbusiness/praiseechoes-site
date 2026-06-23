@@ -1,8 +1,15 @@
 {
-  "updatedAt": "2026-06-22T21:15:28.287Z",
+  "updatedAt": "2026-06-23T10:04:49.896Z",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC44B4Jzwvz4pbuZW9tuSjAg",
   "channelId": "UC44B4Jzwvz4pbuZW9tuSjAg",
   "videos": [
+    {
+      "id": "5axJZfchh9M",
+      "title": "阿爸 我在這裡 Abba Father, I Am Here｜溫柔敬拜基督教詩歌｜不是僕人 不是孤兒，我有了名分有了家",
+      "description": "《阿爸 我在這裡 Abba, I Am Here》是一首關於天父慈愛與兒女名分的中文敬拜詩歌。 我們不再是奴僕，也不再是孤兒，因著神的愛，我們可以坦然呼喚祂：「阿爸，父。」...",
+      "label": "Latest Release",
+      "publishedAt": "2026-06-23T05:00:38+00:00"
+    },
     {
       "id": "FXT-DZtpBcw",
       "title": "祢仍然愛我｜十字架的愛永不改變",
@@ -37,13 +44,6 @@
       "description": "中文歌名：面對面 English title: Face to Face 原視頻： 一首從永恆盼望而生的敬拜詩歌，唱出那一天我們要面對面看見主。 「神要擦去他們一切的眼淚。」啟示錄 21:4 訂閱...",
       "label": "Latest Release",
       "publishedAt": "2026-06-17T06:00:00+00:00"
-    },
-    {
-      "id": "uR33u2RT7fk",
-      "title": "我家要敬拜祢｜我和我家同心回應",
-      "description": "我和我家，願一生事奉祢。 願這段副歌成為家庭敬拜與禱告的回應。 完整詩歌：My House Will Worship You 訂閱 PraiseEchoes，聆聽更多家庭敬拜與原創華語讚美詩。",
-      "label": "Latest Release",
-      "publishedAt": "2026-06-16T06:00:01+00:00"
     }
   ]
 }
