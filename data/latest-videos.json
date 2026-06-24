@@ -1,8 +1,15 @@
 {
-  "updatedAt": "2026-06-23T20:24:52.271Z",
+  "updatedAt": "2026-06-24T09:52:20.272Z",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC44B4Jzwvz4pbuZW9tuSjAg",
   "channelId": "UC44B4Jzwvz4pbuZW9tuSjAg",
   "videos": [
+    {
+      "id": "eJBGoTczp40",
+      "title": "阿爸 我在這裡｜我有了名分 有了家",
+      "description": "中文歌名：阿爸 我在這裡 English title: Abba Father, I Am Here 原視頻： 因著天父的愛，我們不再是僕人或孤兒，而是可以坦然呼叫「阿爸，父」的兒女。...",
+      "label": "Latest Release",
+      "publishedAt": "2026-06-24T06:00:03+00:00"
+    },
     {
       "id": "5axJZfchh9M",
       "title": "阿爸 我在這裡 Abba Father, I Am Here｜溫柔敬拜基督教詩歌｜不是僕人 不是孤兒，我有了名分有了家",
@@ -37,13 +44,6 @@
       "description": "中文歌名：我心屬於祢 English title: My Heart Belongs to You 原視頻： 一首單純向主獻上全心的敬拜詩歌，提醒我們生命最深的歸屬在神手中。 「除祢以外，在天上我有誰呢。」詩篇 73:25 訂閱...",
       "label": "Latest Release",
       "publishedAt": "2026-06-18T06:00:14+00:00"
-    },
-    {
-      "id": "bawC1IQ17YQ",
-      "title": "面對面｜不再有眼淚不再有黑夜",
-      "description": "中文歌名：面對面 English title: Face to Face 原視頻： 一首從永恆盼望而生的敬拜詩歌，唱出那一天我們要面對面看見主。 「神要擦去他們一切的眼淚。」啟示錄 21:4 訂閱...",
-      "label": "Latest Release",
-      "publishedAt": "2026-06-17T06:00:00+00:00"
     }
   ]
 }
