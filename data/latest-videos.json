@@ -1,8 +1,15 @@
 {
-  "updatedAt": "2026-06-25T15:18:26.247Z",
+  "updatedAt": "2026-06-25T20:23:26.874Z",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC44B4Jzwvz4pbuZW9tuSjAg",
   "channelId": "UC44B4Jzwvz4pbuZW9tuSjAg",
   "videos": [
+    {
+      "id": "trsZfPeWry4",
+      "title": "阿爸 我在這裡｜孩子 我永遠愛你",
+      "description": "中文歌名：阿爸 我在這裡 English title: Abba Father, I Am Here 原視頻： 即使天父知道我們所有的軟弱與失敗，祂仍呼喚我們回家，應許永不離棄、永遠愛我們。...",
+      "label": "Latest Release",
+      "publishedAt": "2026-06-25T17:00:13+00:00"
+    },
     {
       "id": "eJBGoTczp40",
       "title": "阿爸 我在這裡｜我有了名分 有了家",
@@ -37,13 +44,6 @@
       "description": "唯獨耶穌 / Only Jesus 定睛耶稣，在软弱中得力量、在迷茫中得方向，并在祂的名里重新看见盼望。 经文：「我就是道路、真理、生命。」約翰福音 14:6 观看完整视频： 欢迎订阅...",
       "label": "Latest Release",
       "publishedAt": "2026-06-20T09:28:22+00:00"
-    },
-    {
-      "id": "QbkEis4Bi0c",
-      "title": "我心屬於祢｜My Heart Belongs to You",
-      "description": "中文歌名：我心屬於祢 English title: My Heart Belongs to You 原視頻： 一首單純向主獻上全心的敬拜詩歌，提醒我們生命最深的歸屬在神手中。 「除祢以外，在天上我有誰呢。」詩篇 73:25 訂閱...",
-      "label": "Latest Release",
-      "publishedAt": "2026-06-18T06:00:14+00:00"
     }
   ]
 }
