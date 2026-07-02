@@ -56,7 +56,11 @@
       "@type": "MusicGroup",
       "name": "PraiseEchoes",
       "url": "https://www.praiseechoes.com/en/",
-      "sameAs": ["https://www.youtube.com/@PraiseEchoes"],
+      "sameAs": [
+        "https://www.youtube.com/@PraiseEchoes",
+        "https://open.spotify.com/artist/794NIhGNBm1pMCzadP0fVW",
+        "https://www.facebook.com/profile.php?id=61573367554527"
+      ],
       "description": "Original worship songs, Chinese worship, devotional piano, and Scripture-inspired music for prayer and quiet reflection.",
       "image": "https://yt3.googleusercontent.com/X8q0CcuQgt5u0HzUIBdwi3S3f133Cgrvkef-sUwN3VmfOvucW5ilj3d0anGpzW1XNA6Iye-DAzw=w2276-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
       "subjectOf": [
@@ -625,6 +629,7 @@
 
   .hero-feature::before,
   .video-card::before,
+  .story-card::before,
   .closing-box::before {
     content: "";
     position: absolute;
@@ -1167,6 +1172,53 @@
     font-weight: 400;
   }
 
+  .story-section {
+    padding-top: 8px;
+  }
+
+  .story-card {
+    border-radius: var(--radius-2xl);
+    padding: clamp(30px, 4.5vw, 54px);
+    border: 1px solid rgba(255, 248, 235, 0.12);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .story-layout {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.66fr) minmax(0, 1.34fr);
+    gap: clamp(26px, 4.5vw, 64px);
+    align-items: start;
+  }
+
+  .story-card h2 {
+    margin: 12px 0 0;
+    max-width: 10ch;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 3.3vw, 3.55rem);
+    line-height: 1.08;
+    letter-spacing: 0;
+    color: var(--ink);
+  }
+
+  .story-body {
+    color: rgba(238, 230, 208, 0.78);
+    font-size: 1.02rem;
+    line-height: 1.85;
+    max-width: none;
+    columns: 2 300px;
+    column-gap: clamp(24px, 3.5vw, 46px);
+  }
+
+  .story-body p {
+    margin: 0 0 16px;
+    break-inside: avoid;
+  }
+
+  .story-body p:last-child {
+    margin-bottom: 0;
+  }
+
   .closing {
     padding-bottom: 76px;
   }
@@ -1215,9 +1267,17 @@
   .footer-row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 16px;
     flex-wrap: wrap;
     font-size: 0.95rem;
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
   }
 
   .footer-row a {
@@ -1302,8 +1362,18 @@
   @media (max-width: 1120px) {
     .hero-inner,
     .about-grid,
+    .story-layout,
     .closing-box {
       grid-template-columns: 1fr;
+    }
+
+    .story-card h2 {
+      max-width: 15ch;
+    }
+
+    .story-body {
+      columns: auto;
+      max-width: 76ch;
     }
 
     .hero-feature {
@@ -1425,6 +1495,7 @@
 
     .panel,
     .quote-box,
+    .story-card,
     .closing-box {
       padding: 22px;
     }
@@ -1535,10 +1606,16 @@
       font-size: 1.45rem;
     }
 
+    .story-card h2 {
+      max-width: 100%;
+      font-size: clamp(1.9rem, 10vw, 3rem);
+    }
+
     .closing {
       padding-bottom: 52px;
     }
 
+    .story-card,
     .closing-box {
       border-radius: var(--radius-2xl);
     }
@@ -1610,6 +1687,7 @@
 
     .panel,
     .quote-box,
+    .story-card,
     .closing-box {
       padding: 18px;
     }
@@ -2036,6 +2114,50 @@
       </div>
     </section>
 
+    <section class="story-section" id="story">
+      <div class="container">
+        <div class="story-card surface reveal">
+          <div class="story-layout">
+            <div>
+              <span class="section-kicker">Our Story</span>
+              <h2>Holding ordinary moments of grace in song.</h2>
+            </div>
+            <div class="story-body">
+              <p>
+                PraiseEchoes comes from an ordinary Christian family. My wife and I
+                follow Christ together, and we are raising a son and a daughter.
+                Today, we serve in our church worship team, and we hope to share the
+                moments that move us in daily life with more people through songs.
+              </p>
+              <p>
+                PraiseEchoes began with a simple need: our church needed bilingual
+                Chinese-English worship materials, and there were not many resources
+                available online. So we started making them ourselves. Later, we felt
+                these resources might bless others too, so we opened the YouTube
+                channel. Within a few months, more than 300 people had subscribed,
+                which encouraged us deeply.
+              </p>
+              <p>
+                Through serving in worship, I had always carried a desire to create.
+                After encountering AI music tools, I finally found the courage to hold
+                on to those brief moments of inspiration. Many of these songs were
+                first written for my own heart. Sometimes an idea would come on the
+                way home from work, and I would quickly write it down. Songs like
+                "Love, How Could I Not Respond?", "Until I Knew You",
+                "Don't Stay in the What-Ifs", and "Face to Face" all came from small
+                moments in ordinary life.
+              </p>
+              <p>
+                AI music is still imperfect, but if these songs can offer even a
+                little companionship, comfort, or help someone turn their heart back
+                to God, that is enough. May all glory belong to God.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="closing" id="connect">
       <div class="container">
         <div class="closing-box surface reveal">
@@ -2080,15 +2202,29 @@
   <footer class="site-footer">
     <div class="container footer-row">
       <span>© <span id="year"></span> PraiseEchoes</span>
-      <span>
+      <nav class="footer-links" aria-label="Social links">
         <a
           href="https://www.youtube.com/@PraiseEchoes?sub_confirmation=1"
           target="_blank"
           rel="noopener noreferrer"
         >
-          @PraiseEchoes
+          YouTube
         </a>
-      </span>
+        <a
+          href="https://open.spotify.com/artist/794NIhGNBm1pMCzadP0fVW"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Spotify
+        </a>
+        <a
+          href="https://www.facebook.com/profile.php?id=61573367554527"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook
+        </a>
+      </nav>
     </div>
   </footer>
 

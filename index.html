@@ -56,7 +56,11 @@
       "@type": "MusicGroup",
       "name": "PraiseEchoes",
       "url": "https://www.praiseechoes.com/",
-      "sameAs": ["https://www.youtube.com/@PraiseEchoes"],
+      "sameAs": [
+        "https://www.youtube.com/@PraiseEchoes",
+        "https://open.spotify.com/artist/794NIhGNBm1pMCzadP0fVW",
+        "https://www.facebook.com/profile.php?id=61573367554527"
+      ],
       "description": "中文原創敬拜、安靜鋼琴與聖經默想音樂，陪你在禱告、靈修、通勤、睡前和低谷時回到神面前。",
       "image": "https://yt3.googleusercontent.com/X8q0CcuQgt5u0HzUIBdwi3S3f133Cgrvkef-sUwN3VmfOvucW5ilj3d0anGpzW1XNA6Iye-DAzw=w2276-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
       "subjectOf": [
@@ -625,6 +629,7 @@
 
   .hero-feature::before,
   .video-card::before,
+  .story-card::before,
   .closing-box::before {
     content: "";
     position: absolute;
@@ -1167,6 +1172,53 @@
     font-weight: 400;
   }
 
+  .story-section {
+    padding-top: 8px;
+  }
+
+  .story-card {
+    border-radius: var(--radius-2xl);
+    padding: clamp(30px, 4.5vw, 54px);
+    border: 1px solid rgba(255, 248, 235, 0.12);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .story-layout {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.66fr) minmax(0, 1.34fr);
+    gap: clamp(26px, 4.5vw, 64px);
+    align-items: start;
+  }
+
+  .story-card h2 {
+    margin: 12px 0 0;
+    max-width: 10ch;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 3.3vw, 3.55rem);
+    line-height: 1.08;
+    letter-spacing: 0;
+    color: var(--ink);
+  }
+
+  .story-body {
+    color: rgba(238, 230, 208, 0.78);
+    font-size: 1.02rem;
+    line-height: 1.85;
+    max-width: none;
+    columns: 2 300px;
+    column-gap: clamp(24px, 3.5vw, 46px);
+  }
+
+  .story-body p {
+    margin: 0 0 16px;
+    break-inside: avoid;
+  }
+
+  .story-body p:last-child {
+    margin-bottom: 0;
+  }
+
   .closing {
     padding-bottom: 76px;
   }
@@ -1215,9 +1267,17 @@
   .footer-row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 16px;
     flex-wrap: wrap;
     font-size: 0.95rem;
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
   }
 
   .footer-row a {
@@ -1302,8 +1362,18 @@
   @media (max-width: 1120px) {
     .hero-inner,
     .about-grid,
+    .story-layout,
     .closing-box {
       grid-template-columns: 1fr;
+    }
+
+    .story-card h2 {
+      max-width: 15ch;
+    }
+
+    .story-body {
+      columns: auto;
+      max-width: 76ch;
     }
 
     .hero-feature {
@@ -1425,6 +1495,7 @@
 
     .panel,
     .quote-box,
+    .story-card,
     .closing-box {
       padding: 22px;
     }
@@ -1535,10 +1606,16 @@
       font-size: 1.45rem;
     }
 
+    .story-card h2 {
+      max-width: 100%;
+      font-size: clamp(1.9rem, 10vw, 3rem);
+    }
+
     .closing {
       padding-bottom: 52px;
     }
 
+    .story-card,
     .closing-box {
       border-radius: var(--radius-2xl);
     }
@@ -1610,6 +1687,7 @@
 
     .panel,
     .quote-box,
+    .story-card,
     .closing-box {
       padding: 18px;
     }
@@ -2036,6 +2114,33 @@
       </div>
     </section>
 
+    <section class="story-section" id="story">
+      <div class="container">
+        <div class="story-card surface reveal">
+          <div class="story-layout">
+            <div>
+              <span class="section-kicker">我們的故事</span>
+              <h2>把生活中的感動，慢慢唱成回聲。</h2>
+            </div>
+            <div class="story-body">
+              <p>
+                PraiseEchoes 來自一個平凡的基督徒家庭。我和妻子一同跟隨主，也一同養育一兒一女。如今，我們參與教會敬拜團的服侍，也盼望把生活中的感動，透過詩歌分享給更多人。
+              </p>
+              <p>
+                PraiseEchoes 起初很單純：教會敬拜需要中英文對照的詩歌，而線上的素材並不多，所以我們開始自己整理與製作。後來，我們想把這些資源分享出去，便開通了 YouTube。沒想到幾個月內，就有三百多位朋友訂閱，這也給了我們很大的鼓勵。
+              </p>
+              <p>
+                在服侍的過程中，我心裡一直有創作的渴望。直到接觸 AI 音樂，我才有勇氣把那些短暫卻真實的感動留下來。很多歌其實是先寫給自己的：有時是在下班路上突然有一個想法，就趕緊記錄下來。像《愛，我怎能不回應》、《直到我認識了祢》、《別停留在如果裡》、《面對面》，都是生活某個瞬間被觸動後留下的回聲。
+              </p>
+              <p>
+                AI 音樂仍有許多不完美，但如果這些作品能帶來一點陪伴、一點安慰，或讓人再次把心轉向神，那就已經足夠。願一切榮耀都歸給神。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="closing" id="connect">
       <div class="container">
         <div class="closing-box surface reveal">
@@ -2079,15 +2184,29 @@
   <footer class="site-footer">
     <div class="container footer-row">
       <span>© <span id="year"></span> PraiseEchoes</span>
-      <span>
+      <nav class="footer-links" aria-label="社群連結">
         <a
           href="https://www.youtube.com/@PraiseEchoes?sub_confirmation=1"
           target="_blank"
           rel="noopener noreferrer"
         >
-          @PraiseEchoes
+          YouTube
         </a>
-      </span>
+        <a
+          href="https://open.spotify.com/artist/794NIhGNBm1pMCzadP0fVW"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Spotify
+        </a>
+        <a
+          href="https://www.facebook.com/profile.php?id=61573367554527"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook
+        </a>
+      </nav>
     </div>
   </footer>
 
