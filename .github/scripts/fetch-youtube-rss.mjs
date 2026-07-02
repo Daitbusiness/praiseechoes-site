@@ -8,6 +8,7 @@ const MIN_DURATION_S = Number(process.env.YOUTUBE_MIN_DURATION_S || 60);
 const OUT_FILE = process.env.YOUTUBE_OUT_FILE || 'data/latest-videos.json';
 const FETCH_RETRIES = Number(process.env.YOUTUBE_FETCH_RETRIES || 3);
 const RETRY_DELAY_MS = Number(process.env.YOUTUBE_RETRY_DELAY_MS || 1200);
+const STALE_FALLBACK_MAX_HOURS = Number(process.env.YOUTUBE_STALE_FALLBACK_MAX_HOURS || 72);
 
 const textDecoder = new TextDecoder();
 
@@ -109,6 +110,17 @@ async function readPreviousData() {
   }
 }
 
+function hasFreshPreviousData(previous, channelId) {
+  if (!previous || previous.channelId !== channelId) return false;
+  if (!Array.isArray(previous.videos) || previous.videos.length === 0) return false;
+
+  const updatedAtMs = Date.parse(previous.updatedAt || '');
+  if (!Number.isFinite(updatedAtMs)) return false;
+
+  const maxAgeMs = STALE_FALLBACK_MAX_HOURS * 60 * 60 * 1000;
+  return Date.now() - updatedAtMs <= maxAgeMs;
+}
+
 async function fetchText(url) {
   let lastError;
 
@@ -194,7 +206,24 @@ function parseEntries(xml) {
 async function main() {
   const channelId = await resolveChannelId();
   const feedUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
-  const xml = await fetchText(feedUrl);
+  let xml;
+
+  try {
+    xml = await fetchText(feedUrl);
+  } catch (error) {
+    const previous = await readPreviousData();
+
+    if (hasFreshPreviousData(previous, channelId)) {
+      console.warn(
+        `YouTube RSS unavailable after ${FETCH_RETRIES} attempts: ${error.message}. ` +
+        `Keeping existing ${OUT_FILE} from ${previous.updatedAt}.`
+      );
+      return;
+    }
+
+    throw error;
+  }
+
   const videos = parseEntries(xml);
 
   if (!videos.length) {
