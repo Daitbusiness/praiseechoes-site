@@ -1,8 +1,15 @@
 {
-  "updatedAt": "2026-07-02T19:54:54.887Z",
+  "updatedAt": "2026-07-03T04:11:51.655Z",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC44B4Jzwvz4pbuZW9tuSjAg",
   "channelId": "UC44B4Jzwvz4pbuZW9tuSjAg",
   "videos": [
+    {
+      "id": "-Ri_AApcz7M",
+      "title": "帶我到寬闊之地｜祢領我進入自由",
+      "description": "帶我到寬闊之地 / Bring Me to a Wide Open Place 当压力使心变得拥挤，主带领我们穿过曲径，进入祂预备的宽阔、平安与自由。 经文：「使我的腳站在寬闊之處。」詩篇 31:8 观看完整视频： 欢迎订阅...",
+      "label": "Latest Release",
+      "publishedAt": "2026-07-02T22:00:30+00:00"
+    },
     {
       "id": "_bB6uU4bETI",
       "title": "一路有祢同行｜Walking With You｜19 首原创敬拜赞美诗歌精选 | PraiseEchoes Vol.1 | 中文敬拜音乐合辑",
@@ -37,13 +44,6 @@
       "description": "中文歌名：阿爸 我在這裡 English title: Abba Father, I Am Here 原視頻： 因著天父的愛，我們不再是僕人或孤兒，而是可以坦然呼叫「阿爸，父」的兒女。...",
       "label": "Latest Release",
       "publishedAt": "2026-06-24T06:00:03+00:00"
-    },
-    {
-      "id": "5axJZfchh9M",
-      "title": "阿爸 我在這裡 Abba Father, I Am Here｜溫柔敬拜基督教詩歌｜不是僕人 不是孤兒，我有了名分有了家",
-      "description": "《阿爸 我在這裡 Abba, I Am Here》是一首關於天父慈愛與兒女名分的中文敬拜詩歌。 我們不再是奴僕，也不再是孤兒，因著神的愛，我們可以坦然呼喚祂：「阿爸，父。」...",
-      "label": "Latest Release",
-      "publishedAt": "2026-06-23T05:00:38+00:00"
     }
   ]
 }
