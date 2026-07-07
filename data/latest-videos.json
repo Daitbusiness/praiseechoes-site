@@ -1,8 +1,15 @@
 {
-  "updatedAt": "2026-07-06T20:15:51.174Z",
+  "updatedAt": "2026-07-07T10:01:59.439Z",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC44B4Jzwvz4pbuZW9tuSjAg",
   "channelId": "UC44B4Jzwvz4pbuZW9tuSjAg",
   "videos": [
+    {
+      "id": "QCB0aDP2JJg",
+      "title": "祢的話我藏在心裡｜生命的根基",
+      "description": "祢的話我藏在心裡 / Your Word Hidden in My Heart 神的话在黑夜中成为亮光，在软弱中带来力量，是我们一生不动摇的根基。 经文：「我將祢的話藏在心裡。」詩篇 119:11 观看完整视频： 欢迎订阅...",
+      "label": "Latest Release",
+      "publishedAt": "2026-07-06T22:00:37+00:00"
+    },
     {
       "id": "-Ri_AApcz7M",
       "title": "帶我到寬闊之地｜祢領我進入自由",
@@ -37,13 +44,6 @@
       "description": "當人的愛會改變、人的話會說盡，祢的愛卻永不止息。 這首敬拜詩歌以「阿爸父」的愛為中心，唱出在失敗、害怕、風暴中，神仍然擁抱、看顧、安慰我們。 「天地都要廢去，祢的話卻不廢去。」 「高山可以挪開，小山可以遷移，但祢的慈愛永不離開。」...",
       "label": "Latest Release",
       "publishedAt": "2026-06-27T17:00:36+00:00"
-    },
-    {
-      "id": "trsZfPeWry4",
-      "title": "阿爸 我在這裡｜孩子 我永遠愛你",
-      "description": "中文歌名：阿爸 我在這裡 English title: Abba Father, I Am Here 原視頻： 即使天父知道我們所有的軟弱與失敗，祂仍呼喚我們回家，應許永不離棄、永遠愛我們。...",
-      "label": "Latest Release",
-      "publishedAt": "2026-06-25T17:00:13+00:00"
     }
   ]
 }
