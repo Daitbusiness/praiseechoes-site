@@ -1,8 +1,15 @@
 {
-  "updatedAt": "2026-07-19T08:35:12.995Z",
+  "updatedAt": "2026-07-19T13:55:52.521Z",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC44B4Jzwvz4pbuZW9tuSjAg",
   "channelId": "UC44B4Jzwvz4pbuZW9tuSjAg",
   "videos": [
+    {
+      "id": "4g4Tj2OTmac",
+      "title": "祂好愛我 He Loves Me So Much｜在十架上毫無保留的愛｜原創敬拜詩歌 | 當你感到軟弱，記得祂從未放手",
+      "description": "《祂好愛我》是一首關於基督無條件之愛與全然交託的原創敬拜詩歌。 當我們軟弱、迷失，甚至懷疑自己走錯道路時，祂仍以慈繩愛索牽引我們，用釘痕的雙手溫柔扶住我們。祂的愛不是因為我們做對了什麼，而是在我們還軟弱時，祂已經為我們毫無保留地付上生命。...",
+      "label": "Latest Release",
+      "publishedAt": "2026-07-19T12:21:06+00:00"
+    },
     {
       "id": "iLcpUBxl8qw",
       "title": "祢領我出黑暗｜祢為我開道路",
@@ -37,13 +44,6 @@
       "description": "〈願祢復興這地〉是一首從個人悔改開始，為教會、家庭、城市與萬民復興呼求的原創華語敬拜詩歌。 從承認心中的冷淡，到求聖靈重新點燃祭壇的火；從枯乾骸骨再次站立，到破碎生命得著更新——願復興先從我的心開始，使神的百姓重新歸向祂。...",
       "label": "Latest Release",
       "publishedAt": "2026-07-14T06:00:13+00:00"
-    },
-    {
-      "id": "eehLbW7bQYY",
-      "title": "直到我認識祢｜耶穌是我的安慰",
-      "description": "直到我認識祢 / Until I Know You 主看见隐藏的眼泪，也知道心里的软弱；祂以恩典拥抱我们，牵引我们走到最后。 经文：「祢已經鑒察我，認識我。」詩篇 139:1 观看完整视频： 欢迎订阅...",
-      "label": "Latest Release",
-      "publishedAt": "2026-07-12T22:49:13+00:00"
     }
   ]
 }
