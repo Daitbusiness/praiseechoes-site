@@ -1,8 +1,15 @@
 {
-  "updatedAt": "2026-07-20T14:34:28.602Z",
+  "updatedAt": "2026-07-20T19:58:20.568Z",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC44B4Jzwvz4pbuZW9tuSjAg",
   "channelId": "UC44B4Jzwvz4pbuZW9tuSjAg",
   "videos": [
+    {
+      "id": "tDv8VegSehs",
+      "title": "祢領我出黑暗｜祢的應許必帶我前行",
+      "description": "中文歌名：祢領我出黑暗 English title: You Led Me Out of Darkness 原視頻：...",
+      "label": "Latest Release",
+      "publishedAt": "2026-07-20T19:20:54+00:00"
+    },
     {
       "id": "4g4Tj2OTmac",
       "title": "祂好愛我 He Loves Me So Much｜在十架上毫無保留的愛｜原創敬拜詩歌 | 當你感到軟弱，記得祂從未放手",
@@ -37,13 +44,6 @@
       "description": "中文歌名：當我放下自己 English title: When I Surrender Myself 原視頻： 把生命、眼淚與過去交在主手中，在基督裡學習不再緊握、不再逃避，讓祂帶出新生命。 「若是死了，就結出許多子粒來。」約翰福音...",
       "label": "Latest Release",
       "publishedAt": "2026-07-14T23:11:04+00:00"
-    },
-    {
-      "id": "6l5k6p-53Cs",
-      "title": "為教會與城市復興禱告｜願祢復興這地｜Revive This Land, O Lord｜聖靈更新・悔改歸向神｜原創華語敬拜",
-      "description": "〈願祢復興這地〉是一首從個人悔改開始，為教會、家庭、城市與萬民復興呼求的原創華語敬拜詩歌。 從承認心中的冷淡，到求聖靈重新點燃祭壇的火；從枯乾骸骨再次站立，到破碎生命得著更新——願復興先從我的心開始，使神的百姓重新歸向祂。...",
-      "label": "Latest Release",
-      "publishedAt": "2026-07-14T06:00:13+00:00"
     }
   ]
 }
