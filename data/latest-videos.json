@@ -1,8 +1,15 @@
 {
-  "updatedAt": "2026-07-21T19:54:10.239Z",
+  "updatedAt": "2026-07-22T08:46:38.123Z",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC44B4Jzwvz4pbuZW9tuSjAg",
   "channelId": "UC44B4Jzwvz4pbuZW9tuSjAg",
   "videos": [
+    {
+      "id": "LZYGa7KN_r0",
+      "title": "祂好愛我｜無論高山低谷，祂從未放手",
+      "description": "中文歌名：祂好愛我 English title: He Loves Me So Much 原視頻： 一首關於基督無條件之愛與全然交託的華語原創敬拜詩歌。無論走過高山或低谷，在軟弱與迷失之中，祂仍以不改變的愛牽引我們，從未放手。...",
+      "label": "Latest Release",
+      "publishedAt": "2026-07-22T07:27:26+00:00"
+    },
     {
       "id": "tDv8VegSehs",
       "title": "祢領我出黑暗｜祢的應許必帶我前行",
@@ -37,13 +44,6 @@
       "description": "《祢領我出黑暗》是「聖經66卷敬拜計畫」第 02 首，以《出埃及記》為根基創作的原創敬拜詩歌。 從逾越羔羊的血、紅海中開出的道路，到曠野裡雲柱火柱的同在，這首詩歌見證神如何領祂的百姓離開捆綁，走向自由。...",
       "label": "Latest Release",
       "publishedAt": "2026-07-15T22:00:08+00:00"
-    },
-    {
-      "id": "sV_IJD7R2xA",
-      "title": "當我放下自己｜我的生命在祢手中",
-      "description": "中文歌名：當我放下自己 English title: When I Surrender Myself 原視頻： 把生命、眼淚與過去交在主手中，在基督裡學習不再緊握、不再逃避，讓祂帶出新生命。 「若是死了，就結出許多子粒來。」約翰福音...",
-      "label": "Latest Release",
-      "publishedAt": "2026-07-14T23:11:04+00:00"
     }
   ]
 }
