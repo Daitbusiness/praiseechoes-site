@@ -373,6 +373,33 @@
     margin-top: 30px;
   }
 
+  .youtube-welcome-actions .youtube-welcome-language {
+    background: #ffffff;
+    border-color: rgba(7, 20, 45, 0.12);
+    color: var(--ink);
+    box-shadow: 0 10px 24px rgba(7, 20, 45, 0.08);
+  }
+
+  .youtube-welcome-actions .youtube-welcome-music {
+    gap: 8px;
+    background: transparent;
+    border-color: transparent;
+    color: var(--accent-deep);
+    box-shadow: none;
+  }
+
+  .youtube-welcome-actions .youtube-welcome-music:hover {
+    background: rgba(109, 93, 252, 0.08);
+    border-color: rgba(109, 93, 252, 0.12);
+    box-shadow: none;
+  }
+
+  .youtube-welcome-music svg {
+    width: 17px;
+    height: 17px;
+    flex: 0 0 auto;
+  }
+
   .youtube-welcome-next {
     display: inline-flex;
   }
@@ -1245,6 +1272,29 @@
     color: var(--muted);
     font-size: 0.94rem;
     line-height: 1.6;
+  }
+
+  .latest-video-grid .video-body h3,
+  .latest-video-grid .video-body p,
+  .hero-feature-body p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .latest-video-grid .video-body h3 {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
+  .latest-video-grid .video-body p {
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+
+  .hero-feature-body p {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
   }
 
   .actions {
@@ -2352,9 +2402,11 @@
 
   @media (max-width: 900px) {
     .nav-menu {
-      background: rgba(255, 255, 255, 0.96);
+      background: #ffffff;
       border-color: rgba(7, 20, 45, 0.10);
       box-shadow: 0 22px 54px rgba(7, 20, 45, 0.14);
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
     }
   }
 
@@ -2413,10 +2465,13 @@
           <button class="btn btn-primary youtube-welcome-light" id="youtubeWelcomeLight" type="button">
             中文
           </button>
-          <button class="btn btn-primary youtube-welcome-next" id="youtubeWelcomeEnter" type="button">
+          <button class="btn btn-secondary youtube-welcome-language youtube-welcome-next" id="youtubeWelcomeEnter" type="button">
             English
           </button>
-          <button class="btn btn-secondary youtube-welcome-next" id="youtubeWelcomeMusic" type="button">
+          <button class="btn youtube-welcome-music youtube-welcome-next" id="youtubeWelcomeMusic" type="button">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M8 5v14l11-7z" />
+            </svg>
             最新詩歌
           </button>
         </div>
@@ -2545,19 +2600,21 @@
                 </div>
                 <div>
                   <strong>PraiseEchoes</strong>
-                  <span>頻道精選</span>
+                  <span>最新發布</span>
                 </div>
               </div>
 
               <div class="frame">
                 <button
                   class="video-poster-button play-here"
+                  id="heroFeatureButton"
                   type="button"
                   data-video-id="Pa_11ipHv40"
                   data-video-title="Prayer at First Light"
                   aria-label="播放 Prayer at First Light"
                 >
                   <img
+                    id="heroFeatureImage"
                     src="https://i.ytimg.com/vi/Pa_11ipHv40/hqdefault.jpg"
                     alt="Prayer at First Light 影片封面"
                     width="480"
@@ -2575,8 +2632,8 @@
               </div>
 
               <div class="hero-feature-body">
-                <h2>Prayer at First Light</h2>
-                <p>
+                <h2 id="heroFeatureTitle">Prayer at First Light</h2>
+                <p id="heroFeatureDescription">
                   適合清晨禱告、靈修和安靜開始一天的溫柔鋼琴。
                 </p>
               </div>
@@ -2663,7 +2720,7 @@
                 <h3>YouTube 最新發布</h3>
               </div>
             </div>
-            <div class="video-grid reveal reveal-delay-1" id="latestVideoGrid"></div>
+            <div class="video-grid latest-video-grid reveal reveal-delay-1" id="latestVideoGrid"></div>
           </div>
 
           <div>
@@ -2729,15 +2786,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              打開頻道
-            </a>
-            <a
-              class="btn btn-secondary"
-              href="https://www.youtube.com/@PraiseEchoes?sub_confirmation=1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              訂閱頻道
+              訂閱 YouTube 頻道
             </a>
             <a
               class="btn btn-secondary"
@@ -2853,6 +2902,10 @@
 
     const latestVideoGrid = document.getElementById('latestVideoGrid');
     const curatedVideoGrid = document.getElementById('curatedVideoGrid');
+    const heroFeatureButton = document.getElementById('heroFeatureButton');
+    const heroFeatureImage = document.getElementById('heroFeatureImage');
+    const heroFeatureTitle = document.getElementById('heroFeatureTitle');
+    const heroFeatureDescription = document.getElementById('heroFeatureDescription');
     const modal = document.getElementById('videoModal');
     const modalPlayer = document.getElementById('modalPlayer');
     const modalTitle = document.getElementById('modalTitle');
@@ -3042,8 +3095,22 @@
       renderVideoCards(curatedVideoGrid, curatedVideos);
     }
 
+    function updateHeroFeature(video) {
+      const normalized = normalizeVideo(video, '最新發布');
+
+      heroFeatureButton.dataset.videoId = normalized.id;
+      heroFeatureButton.dataset.videoTitle = normalized.title;
+      heroFeatureButton.setAttribute('aria-label', `播放 ${normalized.title}`);
+      heroFeatureImage.src = `https://i.ytimg.com/vi/${normalized.id}/hqdefault.jpg`;
+      heroFeatureImage.alt = `${normalized.title} 影片封面`;
+      heroFeatureTitle.textContent = normalized.title;
+      heroFeatureDescription.textContent = normalized.description;
+    }
+
     function renderFallbackLatestVideos() {
-      renderVideoCards(latestVideoGrid, fallbackLatestVideos);
+      const videos = fallbackLatestVideos.slice(0, 3);
+      updateHeroFeature(videos[0]);
+      renderVideoCards(latestVideoGrid, videos);
     }
 
     async function loadLatestVideos() {
@@ -3052,9 +3119,10 @@
         if (!response.ok) throw new Error('最新影片資料暫時不可用。');
 
         const data = await response.json();
-        const videos = Array.isArray(data.videos) ? data.videos.slice(0, 6) : [];
+        const videos = Array.isArray(data.videos) ? data.videos.slice(0, 3) : [];
         if (!videos.length) throw new Error('最新影片資料為空。');
 
+        updateHeroFeature(videos[0]);
         renderVideoCards(latestVideoGrid, videos.map(video => normalizeVideo(video, '最新發布')));
       } catch (error) {
         renderFallbackLatestVideos();

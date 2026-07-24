@@ -1,5 +1,6 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
 
 const CHANNEL_HANDLE = process.env.YOUTUBE_CHANNEL_HANDLE || '@PraiseEchoes';
 const CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID || '';
@@ -93,6 +94,12 @@ function firstMatch(value, pattern) {
   return match ? decodeHtml(match[1]) : '';
 }
 
+export function extractVideoIds(value = '') {
+  return new Set(
+    Array.from(value.matchAll(/"videoId":"([A-Za-z0-9_-]{11})"/g), match => match[1])
+  );
+}
+
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -161,9 +168,20 @@ async function resolveChannelId() {
   return id;
 }
 
-function parseEntries(xml) {
+async function resolveShortVideoIds() {
+  const handle = CHANNEL_HANDLE.startsWith('@') ? CHANNEL_HANDLE : `@${CHANNEL_HANDLE}`;
+  const html = await fetchText(`https://www.youtube.com/${handle}/shorts`);
+  const videoIds = extractVideoIds(html);
+
+  if (!videoIds.size) {
+    throw new Error(`Could not identify Shorts for ${handle}; keeping the previous video data.`);
+  }
+
+  return videoIds;
+}
+
+export function parseEntries(xml, shortVideoIds = new Set()) {
   return Array.from(xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g))
-    .slice(0, MAX_RESULTS * 2)  // fetch extra to compensate for filtered shorts
     .map(([, entry]) => {
       const id =
         firstMatch(entry, /<yt:videoId>([\s\S]*?)<\/yt:videoId>/) ||
@@ -186,6 +204,7 @@ function parseEntries(xml) {
       };
     })
     .filter((video) => video.id && video.title)
+    .filter((video) => !shortVideoIds.has(video.id))
     .filter((video) => !video.duration || video.duration >= MIN_DURATION_S)
     .slice(0, MAX_RESULTS)
     .map(({ duration, ...rest }) => rest);  // strip internal duration field
@@ -194,8 +213,11 @@ function parseEntries(xml) {
 async function main() {
   const channelId = await resolveChannelId();
   const feedUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
-  const xml = await fetchText(feedUrl);
-  const videos = parseEntries(xml);
+  const [xml, shortVideoIds] = await Promise.all([
+    fetchText(feedUrl),
+    resolveShortVideoIds()
+  ]);
+  const videos = parseEntries(xml, shortVideoIds);
 
   if (!videos.length) {
     throw new Error(`No videos found in YouTube RSS feed for ${channelId}`);
@@ -217,4 +239,6 @@ async function main() {
   console.log(`Wrote ${videos.length} latest videos from ${channelId}`);
 }
 
-await main();
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
+  await main();
+}

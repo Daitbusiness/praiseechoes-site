@@ -15,6 +15,9 @@ jobs:
       - name: Check out site
         uses: actions/checkout@v4
 
+      - name: Test YouTube updater
+        run: node --test .github/scripts/fetch-youtube-rss.test.mjs
+
       - name: Fetch latest YouTube videos
         run: node .github/scripts/fetch-youtube-rss.mjs
         env:
